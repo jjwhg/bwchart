@@ -1,0 +1,65 @@
+ 
+// Commands (ID_* and IDM_*) 
+HID_BB_BUILD                            0x18003
+HID_BB_REMOVE                           0x18004
+HID_BB_PROPERTIES                       0x18005
+HID__REBUILDALL                         0x18006
+HID_FFF_ADDPROJECT                      0x18007
+HID_FFF_ADDMULTIPLEPROJECTS             0x18008
+HID_FFF_REMOVE                          0x18009
+HID__ADDFOLDER                          0x1800A
+HID__PROPERTIES                         0x1800B
+HID_VIEW_SNAPSHOT                       0x1800D
+HID_BUILD_PREFERENCES                   0x1800E
+HID_REGISTER                            0x1800F
+HID_VIEW_VIEWPOINTS_RECORD              0x18010
+HID_VIEW_VIEWPOINTS_DISPLAY_1           0x18011
+HID_VIEW_VIEWPOINTS_DISPLAY_2           0x18012
+HID_VIEW_VIEWPOINTS_DISPLAY_3           0x18013
+HID_VIEW_VIEWPOINTS_DISPLAY_4           0x18014
+HID_VIEW_VIEWPOINTS_DISPLAY_5           0x18015
+HID_VIEW_VIEWPOINTS_DISPLAY_6           0x18016
+HID_VIEW_VIEWPOINTS_DISPLAY_7           0x18017
+HID_VIEW_VIEWPOINTS_DISPLAY_8           0x18018
+HID_VIEW_VIEWPOINTS_DISPLAY_9           0x18019
+HID_VIEW_VIEWPOINTS_DISPLAY_10          0x1801A
+HID_VIEW_NEXTDISPLAYMODE                0x1801B
+HID_FILE_VIEWCITYFILE                   0x19C41
+HIDM_CHANGEDEVICE                       0x19C42
+HIDM_TOGGLEFULLSCREEN                   0x19C43
+HID_FILE_FLYMODE_FLYOVER                0x19C44
+HIDM_TOGGLESTART                        0x19C45
+HIDM_SINGLESTEP                         0x19C46
+HIDM_EXIT                               0x19C47
+HID_FILE_FLYMODE_FREEMOVEMENT           0x19C48
+HID_FILE_FLYMODE_MAPVIEW                0x19C49
+HID_VIEW_TOGGLEMETHODNAMES              0x19C4A
+ 
+// Prompts (IDP_*) 
+ 
+// Resources (IDR_*) 
+HIDR_MAINFRAME                          0x20080
+HIDR_MANHATTYPE                         0x20081
+HIDR_MENUPROJECT                        0x20084
+HIDR_MENUFOLDER                         0x20085
+HIDR_MENUROOT                           0x20086
+HIDR_3DPOPUP                            0x2008C
+ 
+// Dialogs (IDD_*) 
+HIDD_ABOUTBOX                           0x20064
+HIDD_DLGWELCOME_DIALOG                  0x20066
+HIDD_TIP                                0x20068
+HIDD_ADDPROJECT                         0x20086
+HIDD_ADDFOLDER                          0x20087
+HIDD_ADDMULTPROJECT                     0x20088
+HIDD_SELECTDEVICE                       0x2008B
+HIDD_CTRLVIEW                           0x2008D
+HIDD_STATSVIEW                          0x2008E
+HIDD_DETAILVIEW                         0x20090
+HIDD_PREFS                              0x200A2
+HIDD_EDITMARK                           0x200A3
+HIDD_METHODSDETAIL                      0x200A4
+HIDD_DEVVIEW                            0x200A5
+HIDD_ADDTOOL                            0x200A6
+ 
+// Frame Controls (IDW_*) 

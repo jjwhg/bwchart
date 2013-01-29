@@ -1,0 +1,2799 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGHELP_DIALOG DIALOG  0, 0, 327, 273
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "帮助"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,138,252,50,14
+    LTEXT           "指令",IDC_STATIC,7,7,24,8
+    LTEXT           "一次指令就是指一次键盘的操作或鼠标的点击。游戏中的其他事件将不会被记录在录象文件中。同时，只有对单位，建筑或资源的指令才会被记录下来。",IDC_STATIC,58,7,262,30
+    LTEXT           "APM",IDC_STATIC,7,41,16,8
+    LTEXT           "Action Per Minute. 是整个游戏过程中的平均值：指令总数/游戏时间。游戏的前1分20秒是不计的。",IDC_STATIC,58,41,262,18
+    LTEXT           "空指令",IDC_STATIC,7,100,13,8
+    LTEXT           "没有产生预期效果的指令被称为空指令。例如，没有足够资源的时候试图建造单位。",IDC_STATIC,58,100,262,28
+    LTEXT           "VAPM",IDC_STATIC,7,154,21,8
+    LTEXT           "有效APM。（指令总数-空指令）/游戏时间。",IDC_STATIC,58,154,262,22
+    LTEXT           "操作比率",IDC_STATIC,7,185,40,8
+    LTEXT           "操作比率显示在头两个选手的旁边，操作比率即选手A的指令数/选手B的指令数。",IDC_STATIC,58,185,262,12
+    LTEXT           "空指令在列表里被标记星号。",IDC_STATIC,58,129,204,10
+    LTEXT           "APM+/-",IDC_STATIC,7,68,26,8
+    LTEXT           "APM方差，测量APM的稳定度，如果它等于0，说明你的APM是个恒定值，如果它很大，说明你的APM随着游戏的进程变化很大。",IDC_STATIC,58,68,262,25
+    LTEXT           "Base",IDC_STATIC,7,202,17,8
+    LTEXT           "Starting location using the clock notation (12 oclock,  3, 6, etc)",IDC_STATIC,58,202,262,12
+    LTEXT           "Micro",IDC_STATIC,7,218,18,8
+    LTEXT           "APM for micro actions (select, move, attack, siege, etc)",IDC_STATIC,58,218,262,9
+    LTEXT           "Macro",IDC_STATIC,7,232,21,8
+    LTEXT           "APM for macro actions (train, build, hatch,  etc)",IDC_STATIC,58,232,262,9
+END
+
+IDD_DLGBWCHART_DIALOG DIALOG  0, 0, 524, 302
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "图表",IDC_MENU_CHARTS,7,5,65,14
+    PUSHBUTTON      "录象浏览器",IDC_MENU_BROWSER,77,5,65,14
+    PUSHBUTTON      "收藏",IDC_MENU_FAVORITES,147,5,65,14
+    PUSHBUTTON      "著名选手",IDC_MENU_AKAS,217,5,65,14
+    PUSHBUTTON      "选项",IDC_MENU_OPTIONS,287,5,65,14
+END
+
+IDD_DLGBROWSER_DIALOG DIALOGEX 0, 0, 480, 265
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "录象 &目录 :",IDC_STATIC,7,2,56,8
+    EDITTEXT        IDC_DIR,67,0,156,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,223,0,19,12
+    PUSHBUTTON      "&(R)刷新",IDC_REFRESH,247,0,62,14
+    CONTROL         "搜索 &(F)子文件夹",IDC_RECURSIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,317,3,75,10
+    LTEXT           "游戏分类:",IDC_STATIC,7,19,35,8
+    CONTROL         "T",IDC_MUTERRAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,19,21,10
+    CONTROL         "Z",IDC_MUZERG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,19,21,10
+    CONTROL         "P",IDC_MUTOSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,21,10
+    CONTROL         "XvX",IDC_MUXVX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,19,29,10
+    CONTROL         "只选RWA",IDC_RWAONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,170,19,48,10
+    PUSHBUTTON      "&添加录象...",IDC_ADDREPLAY,247,17,62,14
+    PUSHBUTTON      "&清除",IDC_CLEANMISSING,317,17,72,14
+    LTEXT           "选手 &过滤器 :",IDC_STATIC,7,37,41,8
+    EDITTEXT        IDC_FPLAYER,67,35,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,37,12,8
+    LTEXT           "0",IDC_REPLAYCOUNT,145,37,203,8
+    LTEXT           "初始位置滤镜 :",IDC_STATIC,7,55,46,8
+    EDITTEXT        IDC_FPOSITIONS,67,52,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_POSFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,55,12,8
+    LTEXT           "输入两个起始位置，用逗号隔开 (例如: 12/3, 9/6)",IDC_STATIC,145,54,196,8
+    LTEXT           "地图滤镜:",IDC_STATIC,7,72,36,8
+    EDITTEXT        IDC_FMAP,67,70,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAPFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,72,12,8
+    LTEXT           "多张地图用逗号隔开 (例如: temple, hunters)",IDC_STATIC,145,72,206,8
+    CONTROL         "列表1",IDC_LISTMAPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,57,103,81,61
+    CONTROL         "列表1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,144,104,112,95
+    CONTROL         "列表1",IDC_LISTPLAYERS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,267,104,67,81
+    LTEXT           "评论 :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "&编辑...",IDC_EDITCOMMENT,444,246,29,12
+    LTEXT           "显示 :",IDC_STATIC,62,199,28,8,NOT WS_VISIBLE
+    CONTROL         "录象&",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,122,199,38,10
+    CONTROL         "&选手",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,169,199,38,10
+    CONTROL         "&地图",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,216,199,33,10
+    CONTROL         "&bos",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,253,199,27,10
+    CONTROL         "进程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,67,17,175,14
+    LTEXT           "0",IDC_PLAYERCOUNT,122,214,65,8,NOT WS_VISIBLE
+    LTEXT           "0",IDC_MAPCOUNT,196,214,65,8,NOT WS_VISIBLE
+    CONTROL         "启动时加载",IDC_AUTOREFRESH,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,63,156,63,10
+    CONTROL         "Tab1",IDC_VTAB,"SysTabControl32",TCS_VERTICAL | TCS_BUTTONS,7,104,14,147
+    CONTROL         "List1",IDC_LISTBOS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,351,105,81,61
+    LTEXT           "Objects in BO:",IDC_STATIC,7,91,46,8
+    EDITTEXT        IDC_BOMAXOBJ,67,88,30,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,86,11,14
+    CONTROL         "buildings",IDC_BO_BUILDING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,90,43,10
+    CONTROL         "units",IDC_BO_UNIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,90,31,10
+    CONTROL         "research",IDC_BO_RESEARCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,90,43,10
+    CONTROL         "upgrade",IDC_BO_UPGRADE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,227,90,40,10
+    CONTROL         "supply",IDC_BO_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,90,40,10
+    COMBOBOX        IDC_COMBOMU,313,88,36,55,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "vs",IDC_STATIC,352,91,8,8
+    CONTROL         "T",IDC_MUTERRAN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,364,91,21,10
+    CONTROL         "Z",IDC_MUZERG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,386,91,21,10
+    CONTROL         "P",IDC_MUTOSS2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,91,21,10
+    LTEXT           "",IDC_BOREPLAYS,433,92,39,8
+    CONTROL         "Filter on selected build orders",IDC_FILTERONBO,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,90,110,10
+END
+
+IDD_DLGFAVORITES DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "列表1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,20,407,203
+    LTEXT           "0",IDC_REPLAYCOUNT,7,7,65,8
+    LTEXT           "评论:",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "&编辑...",IDC_EDITCOMMENT,413,233,29,12
+END
+
+IDD_DLGEDITCOMMENT_DIALOG DIALOG  0, 0, 320, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑评论"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,306,53,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,203,66,50,14
+    PUSHBUTTON      "取消",IDCANCEL,263,66,50,14
+    LTEXT           "评论字数限定在256以内",IDC_STATIC,7,68,124,8
+END
+
+IDD_DLGAKAS DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手",IDC_STATIC,7,7,24,8
+    COMBOBOX        IDC_PLAYERS,7,17,103,99,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&新建...",IDC_ADDPLAYER,115,17,29,13
+    PUSHBUTTON      "&删除",IDC_DELPLAYER,150,17,29,13
+    LTEXT           "知名选手别称",IDC_STATIC,7,36,17,8
+    LISTBOX         IDC_AKAPLAYERS,7,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&编辑选手别称...",IDC_ADDAKAPLAYER,7,244,172,14
+    LTEXT           "地图",IDC_STATIC,221,7,18,8
+    COMBOBOX        IDC_MAPS,221,17,103,127,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&新建...",IDC_ADDMAP,329,17,29,13
+    PUSHBUTTON      "&删除",IDC_DELMAP,364,17,29,13
+    LTEXT           "别称",IDC_STATIC,221,36,17,8
+    LISTBOX         IDC_AKAMAPS,221,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&编辑地图别称...",IDC_ADDAKAMAP,221,244,171,14
+END
+
+IDD_DLGEDITAKAS_DIALOG DIALOG  0, 0, 320, 234
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑别称"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手主要ID",IDC_PLAYERNAME,7,9,56,8
+    EDITTEXT        IDC_MAINNAME,7,21,96,14,ES_AUTOHSCROLL
+    LTEXT           "别称（每行一个）",IDC_STATIC,7,41,60,8
+    EDITTEXT        IDC_AKAS,7,54,158,140,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "建议",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,184,20,55,10
+    CONTROL         "所有ID",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,244,20,46,10
+    LTEXT           "&搜索 :",IDC_STATIC,187,39,38,8
+    EDITTEXT        IDC_SEARCHFOR,228,36,85,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_SUGGESTIONS,182,54,131,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< 添加名字到别称",IDC_ADDAKA,182,180,131,14
+    DEFPUSHBUTTON   "确定",IDOK,205,213,50,14
+    PUSHBUTTON      "取消",IDCANCEL,263,213,50,14
+    GROUPBOX        "",IDC_STATIC,-7,199,341,40
+END
+
+IDD_PROGRESSBAR DIALOG  0, 0, 186, 15
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "正在加载请等待..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "进程1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,0,0,185,14
+END
+
+IDD_DLGOPTIONS DIALOG  0, 0, 349, 237
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Default",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,234,147,39,10
+    CONTROL         "English",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,234,160,43,10
+    CONTROL         "Korean",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,287,148,43,10
+    CONTROL         "Chinese",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,287,160,43,10
+    GROUPBOX        "录象库",IDC_STATIC,4,6,338,90
+    CONTROL         "保存到 ""My documents""",IDC_RADIOSAVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,19,95,10
+    CONTROL         "保存到bwchart",IDC_RADIOSAVE2,"Button",BS_AUTORADIOBUTTON,109,19,97,10
+    PUSHBUTTON      "清除 (replays.txt)",IDC_CLEAR,227,17,91,14
+    CONTROL         "&把bwchart.exe关联到*.rep文件",IDC_FILEASSO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,35,194,10
+    CONTROL         "自动添加并显示最近的游戏的录象",IDC_AUTOADD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,50,241,10
+    CONTROL         "启动时加载最新的录象",IDC_AUTOLOAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,65,97,10
+    CONTROL         "启动时导入录象库 (或按刷新导入录象 )",IDC_AUTOLOADDB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,80,267,10
+    GROUPBOX        "可疑事件",IDC_STATIC,4,101,338,27
+    LTEXT           "忽略以后事件 :",IDC_STATIC,11,113,64,8
+    EDITTEXT        IDC_SUSPECT_LIMIT,79,111,27,13,ES_AUTOHSCROLL
+    LTEXT           "分钟 (重新加载)",IDC_STATIC,111,113,106,8
+    GROUPBOX        "自动检测升级",IDC_STATIC,4,134,214,45
+    PUSHBUTTON      "自动检测升级&",IDC_CHECKUPDATE,10,150,98,14
+    CONTROL         "启动时自动检测",IDC_AUTOCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,152,84,10
+    GROUPBOX        "Language",IDC_STATIC,225,134,116,44
+END
+
+IDD_DLGMAP_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "地图"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "建筑",IDC_BUILDON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,184,43,10
+    PUSHBUTTON      "&动态地图",IDC_ANIMATE,93,183,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,127,183,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,140,183,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,154,183,13,10,WS_DISABLED
+    CONTROL         "资源",IDC_MINERALON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,184,43,10
+END
+
+IDD_DLGFASTAKA_DIALOG DIALOG  0, 0, 319, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "更新别称"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手 1 :",IDC_STATIC,7,9,30,8
+    EDITTEXT        IDC_PLAYER1,47,7,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO1,139,7,64,13
+    COMBOBOX        IDC_LISTPLAYERS1,215,7,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选手 2 :",IDC_STATIC,7,28,30,8
+    EDITTEXT        IDC_PLAYER2,47,25,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO2,139,25,64,13
+    COMBOBOX        IDC_LISTPLAYERS2,215,25,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "地图 :",IDC_STATIC,7,47,19,8
+    EDITTEXT        IDC_MAP,47,44,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO3,139,44,64,13
+    COMBOBOX        IDC_LISTMAPS,215,44,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "关闭",IDCANCEL,262,76,50,14
+    GROUPBOX        "",IDC_STATIC,-9,64,339,40
+    LTEXT           "已经是...的别称",IDC_TEXT1,139,10,64,8,NOT WS_VISIBLE
+    LTEXT           "已经是...的别称",IDC_TEXT2,139,27,64,8,NOT WS_VISIBLE
+    LTEXT           "已经是...的别称",IDC_TEXT3,139,47,64,8,NOT WS_VISIBLE
+END
+
+IDD_DLGOPTIONS1 DIALOGEX 0, 0, 445, 255
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "星际开始前等待时间:",-1,6,6,92,8
+    EDITTEXT        IDC_TIMEWAIT,104,4,40,14,ES_AUTOHSCROLL
+    LTEXT           "毫秒 (default is 3000)",-1,149,7,90,8
+    CONTROL         "&自动按键",IDC_AUTOKEYS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,6,47,10
+    LTEXT           "加载录象按键顺序:",-1,6,25,94,8
+    EDITTEXT        IDC_KEYSEQ,104,23,56,14,ES_AUTOHSCROLL
+    LTEXT           "默认值SEORO*O",-1,166,27,66,8
+    LTEXT           "旧录象按键 :",-1,6,44,74,8
+    EDITTEXT        IDC_KEYSEQ2,104,42,56,14,ES_AUTOHSCROLL
+    LTEXT           "默认值 SSORO*O",-1,166,46,66,8
+    LTEXT           "按键之间等待时间 :",-1,6,63,89,8
+    EDITTEXT        IDC_TIMEWAIT2,104,61,40,14,ES_AUTOHSCROLL
+    LTEXT           "毫秒 (default is 1500)",-1,149,64,90,8
+    LTEXT           "星际1.16版路径:",-1,5,82,62,8
+    EDITTEXT        IDC_BWEXE116,103,81,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV16,313,81,18,14
+    LTEXT           "星际1.15版路径:",-1,5,101,62,8
+    EDITTEXT        IDC_BWEXE115,103,100,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV15,313,100,18,14
+    LTEXT           "星际1.14版路径:",-1,5,120,86,8
+    EDITTEXT        IDC_BWEXE114,103,118,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV14,313,118,18,14
+    LTEXT           "星际1.13版路径:",-1,6,140,86,8
+    EDITTEXT        IDC_BWEXE113,104,138,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV13,314,138,18,14
+    LTEXT           "星际1.12b版路径:",-1,6,159,86,8
+    EDITTEXT        IDC_BWEXE112,104,157,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV12,314,157,18,14
+    LTEXT           "星际1.11b版路径:",-1,6,178,86,8
+    EDITTEXT        IDC_BWEXE111,104,176,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV11,313,176,18,14
+    LTEXT           "星际1.10版路径:",-1,6,198,86,8
+    EDITTEXT        IDC_INSTALLPATH,104,195,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIR,313,195,18,14
+    LTEXT           "星际1.09版路径:",-1,6,218,86,8
+    EDITTEXT        IDC_BWEXE109,104,215,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,313,215,18,14
+    GROUPBOX        "按键功能",-1,348,4,89,81
+    LTEXT           "* 向下卷屏",-1,355,21,52,8
+    LTEXT           "? 向上卷屏",-1,355,35,44,8
+    LTEXT           "$ 返回初始点",-1,355,49,34,8
+    LTEXT           "= 按确认键",-1,355,63,75,8
+    LTEXT           "RWA播放器路径:",-1,6,238,60,8
+    EDITTEXT        IDC_BWPLAYER,103,235,158,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEPLAYER,264,235,18,14
+    CONTROL         "自动开始",IDC_AUTOSTARTRWA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,238,46,10
+END
+
+IDD_DLGOPTIONS_CHART DIALOGEX 0, 0, 338, 281
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "背景坐标方格",IDC_BGGRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,4,68,10
+    CONTROL         "最大APM值操作者",IDC_MAXAPMMARKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,87,4,70,10
+    CONTROL         "背景倾斜度",IDC_BGGRADIENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,166,4,82,10
+    CONTROL         "标注颜色的事件列表",IDC_COLOREDEVENTLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,4,70,10
+    LTEXT           "背景图象 :",IDC_STATIC,4,23,38,8
+    EDITTEXT        IDC_BMPPATH,43,22,187,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEBMP,233,22,20,13
+    CONTROL         "显示背景图象",IDC_USEBMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,24,67,10
+    CONTROL         "中心",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,43,43,37,10
+    CONTROL         "平铺",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,86,43,27,10
+    CONTROL         "拉伸",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,124,43,39,10
+    LTEXT           "位置 :",IDC_STATIC,4,43,30,8
+    GROUPBOX        "预览",IDC_PREVIEW,4,61,321,154
+    LTEXT           "地图名称 : ",IDC_STATIC,10,229,40,8
+    CONTROL         "",IDC_COLOR_MAPNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,55,227,20,12
+    LTEXT           "选手名字 :",IDC_STATIC,91,229,47,8
+    CONTROL         "",IDC_COLOR_PLAYERNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,149,227,20,12
+    GROUPBOX        "文本颜色",IDC_STATIC,4,216,321,30
+    LTEXT           "其他标签 :",IDC_STATIC,181,229,42,8
+    CONTROL         "",IDC_COLOR_OTHER,"Static",SS_BLACKRECT | NOT WS_VISIBLE,229,227,20,12
+    PUSHBUTTON      "&默认项",IDC_DEFAULTS,270,227,50,12
+    GROUPBOX        "图表颜色",IDC_STATIC,4,249,321,30
+    LTEXT           "&种类 :",IDC_STATIC,9,264,21,8
+    COMBOBOX        IDC_COMBOTYPE,33,261,85,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_COLOR_CHART,"Static",SS_BLACKRECT | NOT WS_VISIBLE,128,261,20,12
+    PUSHBUTTON      "&默认项",IDC_DEFAULTS2,269,261,50,12
+    LTEXT           "行距 &大小 : ",IDC_STATIC,158,264,34,8
+    COMBOBOX        IDC_COMBOLSIZE,193,261,35,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BWCHART_DIALOG DIALOGEX 0, 0, 536, 364
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&打开...",IDC_GETEVENTS,7,0,34,14
+    PUSHBUTTON      "&加载...",IDC_ADDEVENT,48,0,34,14
+    LTEXT           "图&表 :",IDC_STATIC,92,3,22,8
+    COMBOBOX        IDC_CHARTTYPE,115,0,91,97,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "所&有选手显示在同一个图表上",IDC_SINGLECHART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,94,10
+    LTEXT           "&放大 :",IDC_STATIC,218,3,23,8
+    COMBOBOX        IDC_ZOOM,244,0,32,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "资&源",IDC_MINERALS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,0,42,10
+    CONTROL         "&气体",IDC_GAZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,11,29,10
+    CONTROL         "&人口",IDC_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,22,37,10
+    CONTROL         "Macro",IDC_SPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,33,36,10
+    CONTROL         "&单位",IDC_UNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,0,32,10
+    CONTROL         "&转折点",IDC_HOTPOINTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,11,48,10
+    CONTROL         "&建筑比例",IDC_BPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,22,45,10
+    CONTROL         "&建造单位比例",IDC_UPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,33,46,10
+    CONTROL         "秒&钟",IDC_USESECONDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,0,44,10
+    CONTROL         "操&作",IDC_ACTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,11,39,10
+    CONTROL         "&百分比",IDC_PERCENTAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,22,53,10
+    CONTROL         "在建筑&顺序上的单位",IDC_UNITSONBO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,33,54,10
+    CONTROL         "热键选择",IDC_HKSELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,0,71,10
+    CONTROL         "不同操作分配比",IDC_SORTDIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,11,64,10
+    PUSHBUTTON      "显示&地图",IDC_SEEMAP,403,225,41,11,WS_DISABLED
+    PUSHBUTTON      "&动画演示",IDC_ANIMATE,445,225,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,479,226,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,492,225,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,506,226,13,10,WS_DISABLED
+    CONTROL         "列表1",IDC_LISTEVENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,258,354,86
+    PUSHBUTTON      "&帮助",IDC_DHELP,366,310,34,11
+    SCROLLBAR       IDC_SCROLLBAR1,7,225,332,11
+    LTEXT           "双击选手名字显示/屏蔽图表和事件列表",IDC_DBLCLICK,370,350,192,8
+    PUSHBUTTON      "测试录象载入",IDC_TESTREPLAYS,521,4,73,9,NOT WS_VISIBLE
+    CONTROL         "过程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,521,14,49,11
+    SCROLLBAR       IDC_SCROLLBAR2,518,25,10,201,SBS_VERT | WS_DISABLED
+    LTEXT           "持续时间 00:00:00",IDC_GAMEDURATION,7,20,104,8
+    LTEXT           "00:00:00",IDC_EXACTTIME,355,226,33,8
+    LTEXT           "",IDC_ANIMSPEED,218,20,20,8
+    CONTROL         "选择",IDC_FLT_SELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,246,36,10
+    CONTROL         "建筑",IDC_FLT_BUILD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,246,31,10
+    CONTROL         "建造",IDC_FLT_TRAIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,246,32,10
+    CONTROL         "可疑操作",IDC_FLT_SUSPECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,246,68,10
+    CONTROL         "Hack",IDC_FLT_HACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,246,48,10
+    CONTROL         "Chat",IDC_FLT_CHAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,299,246,48,10
+    CONTROL         "列表1",IDC_PLSTATS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,393,244,135,101
+    CONTROL         "其他",IDC_FLT_OTHERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,246,37,10
+    PUSHBUTTON      "下一个",IDC_NEXT_SUSPECT,323,346,38,12
+    CONTROL         "",IDC_SUSPECT_INFO,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,346,313,13
+    CONTROL         "",IDC_REPLAYFILE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,34,271,8
+    COMBOBOX        IDC_APMSTYLE,440,29,66,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DLGRENAME_DIALOG DIALOG  0, 0, 320, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "重命名录象"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "名称 &格式 :",IDC_STATIC,7,9,45,8
+    EDITTEXT        IDC_FORMAT,53,7,95,13,ES_AUTOHSCROLL
+    LTEXT           ".rep",IDC_STATIC,154,9,13,8
+    LTEXT           "(录象文件名最长只能包含27个英文字符)",IDC_STATIC,174,10,139,8
+    LTEXT           "&替换 :",IDC_STATIC,7,108,32,8
+    EDITTEXT        IDC_USERDEF1,43,105,35,13,ES_AUTOHSCROLL
+    LTEXT           "使用",IDC_STATIC,85,108,14,8
+    EDITTEXT        IDC_REPLACEMENT1,107,105,40,13,ES_AUTOHSCROLL
+    LTEXT           "用此限定替换录象",IDC_STATIC,161,107,121,8
+    PUSHBUTTON      "默认模式",IDC_DEFAULT,246,29,58,14
+    CONTROL         "列表1",IDC_REPLAYS,"SysListView32",LVS_REPORT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,127,306,123
+    CONTROL         "过程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,7,259,182,14
+    PUSHBUTTON      "取消",IDCANCEL,263,259,50,14
+    LTEXT           "- 使用 %p1 标记代表一个选手,而 %p2 代表另一个选手",IDC_STATIC,8,26,159,8
+    LTEXT           "- 使用 %t1 标记代表一个选手,而 %t2 代表另一个选手",IDC_STATIC,8,36,203,8
+    DEFPUSHBUTTON   "重命名",IDC_RENAME,206,259,50,14
+    LTEXT           "- 使用 %map 标记代表地图名字的首字母",IDC_STATIC,8,57,148,8
+    LTEXT           "- 使用 %apm1 和 %apm2 标记代表不同选手的APM值",IDC_STATIC,8,67,159,8
+    LTEXT           "- 使用 %gmt 标记代表游戏模式 (除了1v1模式)",IDC_STATIC,8,77,156,8
+    LTEXT           "- 标记可以被略去",IDC_STATIC,8,87,79,8
+    LTEXT           "- 使用 %pos1 标记代表一个选手的起始位置,而 %pos2 代表另个选手的",IDC_STATIC,8,47,242,8
+END
+
+IDD_EXPORTCOACHDLG_DIALOG DIALOG  0, 0, 268, 246
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导出BW Coach的训练文件"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "训练文件描述",IDC_STATIC,7,7,254,53
+    LTEXT           "&作者 :",IDC_STATIC,14,21,48,8
+    EDITTEXT        IDC_AUTHOR,64,19,80,14,ES_AUTOHSCROLL
+    LTEXT           "&名称 :",IDC_STATIC,150,21,24,8
+    EDITTEXT        IDC_TITLE,177,19,78,14,ES_AUTOHSCROLL
+    LTEXT           "&描述 :",IDC_STATIC,14,41,48,8
+    EDITTEXT        IDC_DESC,64,39,191,14,ES_AUTOHSCROLL
+    GROUPBOX        "选项",IDC_STATIC,7,61,254,53
+    LTEXT           "&导出建筑顺序直到(时间) :",IDC_STATIC,15,75,80,8
+    EDITTEXT        IDC_DURATION,96,72,37,14,ES_AUTOHSCROLL
+    LTEXT           "分钟",IDC_STATIC,138,75,25,8
+    CONTROL         "包括 &单位的建造",IDC_EXPORTUNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,93,81,10
+    CONTROL         "包括人族SCV,虫族农民,神族工兵",IDC_EXPORTWORKERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,93,101,10
+    LTEXT           "双击显示或屏蔽特定选手的操作输出",IDC_STATIC,7,122,150,8
+    CONTROL         "列表1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,136,254,82
+    DEFPUSHBUTTON   "导出",IDOK,144,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,211,225,50,14
+END
+
+IDD_MAIN_OPTIONS DIALOG  0, 0, 425, 252
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "控件1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,7,411,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUPREPLAY MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&载入录象",                       ID_F_LOADREPLAY
+        MENUITEM "&加载录象",                       ID__ADDREPLAYEVENTS
+        MENUITEM "&编辑评论...",                    ID__EDITCOMMENTS
+        MENUITEM "添加到收藏夹",                      ID__ADDTOFAVORITES
+        MENUITEM "&更新别名...",                    ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        POPUP "&启动星际观看录象"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&自动",                         ID__WATCHREPLAYINBW_AUTO
+        END
+        POPUP "&文件"
+        BEGIN
+            MENUITEM "打开&录象列表",                     ID__OPENDIRECTORY
+            MENUITEM "&移至回收站",                      ID__FILE_MOVETORECYCLEBIN
+            MENUITEM "移至&文件夹...",                   ID__MOVETOFOLDER
+            MENUITEM "&重命名..",                      ID__FILE_RENAME
+        END
+    END
+END
+
+IDR_POPUPPLAYER MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&删除选手",                       ID__REMOVEPLAYER
+        MENUITEM "&确定/取消",                      ID__ENABLEDISABLE
+    END
+END
+
+IDR_POPUPFAV MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&载入录象",                       ID_F_LOADREPLAY
+        MENUITEM "&加载录象",                       ID__ADDREPLAYEVENTS
+        MENUITEM "&编辑评论...",                    ID__EDITCOMMENTS
+        MENUITEM "&从收藏夹中删除",                    ID__REMOVEFAVORITES
+        MENUITEM "&更新别名...",                    ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        MENUITEM "&启动星际观看录象...",                ID__WATCHREPLAYINBW
+    END
+END
+
+IDR_POPPLAYERS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&录象列表",                       ID_G_LISTREPLAYS
+    END
+END
+
+IDR_POPUPREPLAYMULT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&添加到收藏夹",                     ID__ADDTOFAVORITES
+        MENUITEM "&移至回收站",                      ID__FILE_MOVETORECYCLEBIN
+        MENUITEM "移至文件夹...",                    ID__MOVETOFOLDER
+        MENUITEM "&重命名...",                     ID__FILE_RENAME
+    END
+END
+
+IDR_WATCHREP MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&启动星际观看录象"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&自动",                         ID__WATCHREPLAYINBW_AUTO
+        END
+    END
+END
+
+IDR_MENU_EVENTS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&导出至"
+        BEGIN
+            MENUITEM "&文本文件",                       ID_FF_EXPORT_TOTEXTFILE
+            MENUITEM "&BWCoach...",                 ID__EXPORTTO_BWCOACH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLGHELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_DLGBWCHART_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DLGBROWSER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGFAVORITES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITCOMMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_DLGAKAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITAKAS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_PROGRESSBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 7
+    END
+
+    IDD_DLGOPTIONS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 342
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLGMAP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DLGFASTAKA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DLGOPTIONS1, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_DLGOPTIONS_CHART, DIALOG
+    BEGIN
+        RIGHTMARGIN, 331
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLGOPTIONS_CHART DLGINIT
+BEGIN
+    IDC_COMBOTYPE, 0x403, 8, 0
+0x694d, 0x656e, 0x6172, 0x006c, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x6147, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 7, 0
+0x7553, 0x7070, 0x796c, "\000" 
+    IDC_COMBOTYPE, 0x403, 6, 0
+0x6e55, 0x7469, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x5041, 0x004d, 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5042, 0x204d, 0x6228, 0x6975, 0x646c, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5054, 0x204d, 0x7428, 0x6172, 0x6e69, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 13, 0
+0x614d, 0x2070, 0x6f43, 0x6576, 0x6172, 0x6567, "\000" 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0033, 
+    0
+END
+
+IDD_BWCHART_DIALOG DLGINIT
+BEGIN
+    IDC_ZOOM, 0x403, 2, 0
+0x0031, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0032, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0034, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0038, 
+    IDC_ZOOM, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_ZOOM, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_APMSTYLE, 0x403, 10, 0
+0x6556, 0x7972, 0x6620, 0x616c, 0x0074, 
+    IDC_APMSTYLE, 0x403, 5, 0
+0x6c46, 0x7461, "\000" 
+    IDC_APMSTYLE, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_APMSTYLE, 0x403, 8, 0
+0x7944, 0x616e, 0x696d, 0x0063, 
+    IDC_APMSTYLE, 0x403, 13, 0
+0x6556, 0x7972, 0x4420, 0x6e79, 0x6d61, 0x6369, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOXMENU        "&关于BW Chart..."
+    IDS_DELETEAKAS          "是否真的要删除全部别名 <%s> ?"
+    IDS_EMPTYDB             "本地录象库是空的.\r\n是否要载入录象库从 '%s' ?\r\n\r\n(点击""取消""避免再次弹出此窗口)"
+    IDS_ONEREPLAYADDED      "%d 录象已加载到录象库中."
+    IDS_MULREPLAYADDED      "%d 所选中全部录象已加载到录象库中."
+    IDS_CORRUPTED           "以下录象文件可能已受损:\r\n"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MOREREPLAYS         "\r\n\r\n是否要将这些录象移至特殊的文件夹?BWchart将忽略它们."
+    IDS_REMOVEREP           "<%s> 永久消除.\r\n是否要将其从录象库中删除?"
+    IDS_EMPTYBWPATH         "星际安装路径错误. 请检查'选项'里的设置."
+    IDS_CANTSTARTBW         "无法启动星际. 请检查'选项'里的设置."
+    IDS_NOBWWINDOW          "无法找到星际窗口位置(可能是启动时间过长)"
+    IDS_CANTCOPY            "无法复制录象文件至bwchart的录象列表."
+    IDS_REMOVEDMISSING      "%d 丢失的录象已从录象库中删除"
+    IDS_AKAEXIST            "选中选手已存在其他别名"
+    IDS_REFRESHBROWSER      "列表现在是空的.现在是否刷新录象浏览器?"
+    IDS_PLAYERS             "选手"
+    IDS_MAPS                "地图"
+    IDS_MOVEREP             "是否要将录象库中的录象移至新的文件夹?"
+    IDS_CORRUPTEDBIS        "<%s> 可能已受损"
+    IDS_CANTLOAD            "无法载入 %s"
+    IDS_CANTCREATFILE       "无法新建文件"
+    IDS_CORRUPTED3          "<%s>\r\n可能已受损.请把该文件从录象库中删除"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DELETEALL           "是否真的要删除录象存库文件?(replays.txt) ?"
+    IDS_FORMATCHG           "录象库的模式已更改.\r\n\r\n通过双击录象浏览器窗口上的""刷新""可重建录象库\r\n. 收藏夹列表已丢失.\r\n\r\n现在新的模式可接受更新而无须重建录象库.\r\n\r\n即此带来的麻烦表示歉意."
+    IDS_SUSPICIOUS          "可疑操作 (%d)"
+    IDS_COL_TIME            "时间"
+    IDS_COL_PLAYER          "选手"
+    IDS_COL_ACTION          "操作"
+    IDS_COL_PARAMETERS      "范围"
+    IDS_COL_UNITSID         "单位 ID"
+    IDS_COL_ACTIONS         "多项操作"
+    IDS_COL_APM             "APM"
+    IDS_COL_NULL            "无效操作"
+    IDS_COL_VAPM            "有效APM"
+    IDS_COL_MINERAL         "资源"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAS             "气体"
+    IDS_COL_SUPPLY          "人口"
+    IDS_COL_UNITS           "单位"
+    IDS_COL_APMPM           "APM+/-"
+    IDS_COL_APMMAX          "APM 最大值"
+    IDS_COL_APMMIN          "APM 最小值"
+    IDS_COL_BASE            "基地"
+    IDS_COL_REPLAYNAME      "录象名称"
+    IDS_COL_PLAYER1         "选手 1"
+    IDS_COL_APM1            "APM 1"
+    IDS_COL_PLAYER2         "选手 2"
+    IDS_COL_APM2            "APM 2"
+    IDS_COL_MAP             "地图"
+    IDS_COL_DURATION        "持续时间"
+    IDS_COL_TYPE            "类型"
+    IDS_COL_RWAAUTHOR       "RWA作者"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAMEDATE        "游戏时间"
+    IDS_COL_ENGINE          "版本"
+    IDS_COL_COMMENT         "评论"
+    IDS_COL_DIRECTORY       "录象列表"
+    IDS_COL_FILEDATE        "文件生成日期"
+    IDS_COL_POS1            "位置1"
+    IDS_COL_POS2            "位置2"
+    IDS_COL_PLAYERNAME      "选手名字"
+    IDS_COL_AVGAPM          "平均APM值"
+    IDS_COL_PERCDEV         "% dev"
+    IDS_COL_GAMESPLAYED     "已完成的游戏"
+    IDS_COL_ZERGPERC        "虫族%"
+    IDS_COL_RANPERC         "人族%"
+    IDS_COL_TOSSPERC        "神族%"
+    IDS_COL_MAPNAME         "地图名称"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNITS               "单位"
+    IDS_CT_RESOURCES        "资源"
+    IDS_CT_UNITDIST         "单位组成"
+    IDS_CT_ACTIONDIST       "操作分配"
+    IDS_CT_BUILDDIST        "建筑组成"
+    IDS_CT_UPGRADES         "升级"
+    IDS_CT_APMDIST          "APM值分配"
+    IDS_CT_BO               "建造顺序"
+    IDS_CT_HOTKEYS          "热键"
+    IDS_CT_APM              "APM"
+    IDS_COL_MICRO           "Micro"
+    IDS_COL_MACRO           "Macro"
+    IDS_COL_AVGAPMAST       "平均APM值 T"
+    IDS_COL_AVGAPMASZ       "平均APM值 Z"
+    IDS_COL_AVGAPMASP       "平均APM值 P"
+    IDS_MINIMAPPING         "Ping"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_AVGGAMEDURATION "平均游戏时间"
+    IDS_WATCHREPLAY         "查看录象"
+    IDS_CHARTS              "图表"
+    IDS_OTHEROPTIONS        "其他选项"
+    IDS_MKDURATION          "持续时间: %s@%s"
+    IDS_DROP                "空投"
+    IDS_EXPAND              "扩张"
+    IDS_LEAVE               "离开"
+    IDS_MINGAS              "资源 && 气体"
+    IDS_SUPPLYUNIT          "人口 && 单位"
+    IDS_AUDIOCOMMENT        " (语音评论由 %s)"
+    IDS_TOTAL               "[总计 = %d]"
+    IDS_ANIMATE             "&动画演示"
+    IDS_STOP                "&停止"
+    IDS_BUILDS              "建筑"
+    IDS_MOVES               "移动"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_BOCOUNT         "Count"
+    IDS_COL_BOCONTENT       "Build Order"
+    IDS_COL_BOPERCENT       "%"
+    IDS_HACK                "Hack (%d)"
+    IDS_HACKCOUNT           "Hacks"
+    IDS_CT_MIX_APMHOTKEYS   "APM+Hot Keys"
+    IDS_CT_MAPCOVERGAGE     "Map Coverage"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGHELP_DIALOG DIALOG  0, 0, 327, 276
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "档框富"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "摧扁",IDCANCEL,138,255,50,14
+    LTEXT           "Actions",IDC_STATIC,7,7,24,8
+    LTEXT           "Action篮 敲饭捞绢狼 努腐捞唱 虐焊靛 窜绵虐 荤侩阑 狼固 钦聪促. 促弗 青悼篮 府敲饭捞 颇老俊 扁废登瘤 臼嚼聪促. 肚, 蜡粗, 扒拱, 磊盔俊 措茄 努腐父 扁废 邓聪促.",IDC_STATIC,58,7,262,30
+    LTEXT           "APM",IDC_STATIC,7,41,16,8
+    LTEXT           "Action Per Minute.  霸烙 傈眉俊 措茄 乞闭: 傈眉 Action狼 荐 / 霸烙 辨捞. 霸烙捞 矫累窍绊 1盒 20檬绰 公矫 钦聪促.",IDC_STATIC,58,41,262,18
+    LTEXT           "Null",IDC_STATIC,7,100,13,8
+    LTEXT           "抗惑等 搬苞甫 惯积 矫虐瘤 臼绰 青悼篮 ""null""肺 瘤疙钦聪促. 抗甫 甸绢, 磊盔捞 绝阑 锭 扒拱捞唱 蜡粗阑 父甸妨搁 null肺 贸府邓聪促. 肚, 诀弊饭捞靛 窍妨绊 20锅 楷加 努腐 窍搁 腹篮 null 青悼阑 父奠聪促.",IDC_STATIC,58,100,262,28
+    LTEXT           "VAPM",IDC_STATIC,7,154,21,8
+    LTEXT           "Valid Action Per Minute. 霸烙 傈眉俊 措茄 乞闭涝聪促. 傈眉 action荐 俊辑 null阑 猾 蔼阑 傈眉 霸烙 矫埃栏肺 唱传 巴 涝聪促.",IDC_STATIC,58,154,262,22
+    LTEXT           "Action 厚啦",IDC_STATIC,7,185,44,8
+    LTEXT           "滴 敲饭捞绢狼 捞抚 糠俊 钎脚等 厚啦捞 Action 厚啦涝聪促 (茄 敲饭捞绢狼 Action 醚钦 / 惑措 敲饭捞绢狼 Action 醚钦)",IDC_STATIC,58,185,262,22
+    LTEXT           "Null action俊绰 傈眉 Action 格废俊辑 喊(*) 钎矫啊 乐嚼聪促.",IDC_STATIC,58,132,211,10
+    LTEXT           "APM+/-",IDC_STATIC,7,68,26,8
+    LTEXT           "乞闭 APM 祈瞒. APM捞 倔付唱 绊弗瘤 钎矫 钦聪促. 0俊 啊鳖匡 荐废, 霸烙 窍绰 悼救 厚搅茄 狐福扁肺 敲饭捞 茄促绰 舵 涝聪促. 臭篮 荐摹绰 加档 函悼捞 缴窍促绰 舵 涝聪促.",IDC_STATIC,58,68,262,25
+    LTEXT           "Base",IDC_STATIC,7,208,17,8
+    LTEXT           "Starting location using the clock notation (12 oclock,  3, 6, etc)",IDC_STATIC,58,208,262,12
+    LTEXT           "Micro",IDC_STATIC,7,224,18,8
+    LTEXT           "APM for micro actions (select, move, attack, siege, etc)",IDC_STATIC,58,224,262,9
+    LTEXT           "Macro",IDC_STATIC,7,238,21,8
+    LTEXT           "APM for macro actions (train, build, hatch,  etc)",IDC_STATIC,58,238,262,9
+END
+
+IDD_DLGBWCHART_DIALOG DIALOG  0, 0, 524, 302
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "钎",IDC_MENU_CHARTS,7,5,82,14
+    PUSHBUTTON      "府敲饭捞 沤祸扁",IDC_MENU_BROWSER,93,5,82,14
+    PUSHBUTTON      "榴败焊绰 府敲饭捞",IDC_MENU_FAVORITES,179,5,82,14
+    PUSHBUTTON      "Akas",IDC_MENU_AKAS,265,5,82,14
+    PUSHBUTTON      "汲沥",IDC_MENU_OPTIONS,351,5,82,14
+END
+
+IDD_DLGBROWSER_DIALOG DIALOGEX 0, 0, 480, 265
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "府敲饭捞 弃歹 :",IDC_STATIC,7,2,56,8
+    EDITTEXT        IDC_DIR,67,0,156,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,223,0,19,12
+    PUSHBUTTON      "货肺绊魔",IDC_REFRESH,247,0,62,14
+    CONTROL         "窍困 弃歹 八祸",IDC_RECURSIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,317,3,75,10
+    LTEXT           "辆练 :",IDC_STATIC,7,19,35,8
+    CONTROL         "T",IDC_MUTERRAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,19,21,10
+    CONTROL         "Z",IDC_MUZERG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,19,21,10
+    CONTROL         "P",IDC_MUTOSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,21,10
+    CONTROL         "XvX",IDC_MUXVX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,19,29,10
+    CONTROL         "RWA颇老父",IDC_RWAONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,170,19,58,10
+    PUSHBUTTON      "府敲饭捞 眠啊...",IDC_ADDREPLAY,247,17,62,14
+    PUSHBUTTON      "绝绰 府敲饭捞 沥府",IDC_CLEANMISSING,317,17,81,14
+    LTEXT           "敲饭捞绢 鞘磐 :",IDC_STATIC,7,37,57,8
+    EDITTEXT        IDC_FPLAYER,67,35,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,37,12,8
+    LTEXT           "0",IDC_REPLAYCOUNT,145,37,203,8
+    LTEXT           "矫累 困摹 鞘磐 :",IDC_STATIC,7,55,56,8
+    EDITTEXT        IDC_FPOSITIONS,67,52,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_POSFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,55,12,8
+    LTEXT           "矫累 困摹 茄 街侥, 霓付肺 唱穿绢 涝仿秦林技夸 (抗: 12/3, 9/6)",IDC_STATIC,145,54,224,8
+    LTEXT           "甘 鞘磐 :",IDC_STATIC,7,72,36,8
+    EDITTEXT        IDC_FMAP,67,70,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAPFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,72,12,8
+    LTEXT           "2俺 捞惑狼 甘篮 霓付肺 唱穿绢 涝仿秦林技夸 (抗: temple, hunters)",IDC_STATIC,145,72,234,8
+    CONTROL         "List1",IDC_LISTMAPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,57,110,81,61
+    CONTROL         "List1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,144,111,112,95
+    CONTROL         "List1",IDC_LISTPLAYERS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,267,111,67,81
+    LTEXT           "秦汲 :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "荐沥...",IDC_EDITCOMMENT,444,246,29,12
+    LTEXT           "钎矫 :",IDC_STATIC,62,199,28,8,NOT WS_VISIBLE
+    CONTROL         "府敲饭捞",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,122,199,38,10
+    CONTROL         "敲饭捞绢",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,169,199,38,10
+    CONTROL         "甘",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,216,199,33,10
+    CONTROL         "&bos",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,253,199,27,10
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,67,17,175,14
+    LTEXT           "0",IDC_PLAYERCOUNT,122,214,65,8,NOT WS_VISIBLE
+    LTEXT           "0",IDC_MAPCOUNT,196,214,65,8,NOT WS_VISIBLE
+    CONTROL         "矫累矫 肺靛",IDC_AUTOREFRESH,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,63,156,63,10
+    CONTROL         "Tab1",IDC_VTAB,"SysTabControl32",TCS_VERTICAL | TCS_BUTTONS,7,111,14,147
+    CONTROL         "List1",IDC_LISTBOS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,351,112,81,61
+    LTEXT           "Objects in BO:",IDC_STATIC,7,91,46,8
+    EDITTEXT        IDC_BOMAXOBJ,67,88,30,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,86,11,14
+    CONTROL         "buildings",IDC_BO_BUILDING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,90,43,10
+    CONTROL         "units",IDC_BO_UNIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,90,31,10
+    CONTROL         "research",IDC_BO_RESEARCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,90,43,10
+    CONTROL         "upgrade",IDC_BO_UPGRADE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,227,90,40,10
+    CONTROL         "supply",IDC_BO_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,90,40,10
+    COMBOBOX        IDC_COMBOMU,313,88,36,55,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "vs",IDC_STATIC,352,91,8,8
+    CONTROL         "T",IDC_MUTERRAN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,364,91,21,10
+    CONTROL         "Z",IDC_MUZERG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,386,91,21,10
+    CONTROL         "P",IDC_MUTOSS2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,91,21,10
+    LTEXT           "",IDC_BOREPLAYS,433,92,39,8
+    CONTROL         "Filter on selected build orders",IDC_FILTERONBO,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,90,110,10
+END
+
+IDD_DLGFAVORITES DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "List1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,20,407,203
+    LTEXT           "0",IDC_REPLAYCOUNT,7,7,65,8
+    LTEXT           "秦汲 :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "荐沥...",IDC_EDITCOMMENT,413,233,29,12
+END
+
+IDD_DLGEDITCOMMENT_DIALOG DIALOG  0, 0, 320, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "秦汲 荐沥"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,306,53,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "犬牢",IDOK,203,66,50,14
+    PUSHBUTTON      "秒家",IDCANCEL,263,66,50,14
+    LTEXT           "秦汲篮 256磊肺 力茄邓聪促.",IDC_STATIC,7,68,121,8
+END
+
+IDD_DLGAKAS DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "敲饭捞绢",IDC_STATIC,7,7,28,8
+    COMBOBOX        IDC_PLAYERS,7,17,103,99,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "眠啊...",IDC_ADDPLAYER,115,17,29,13
+    PUSHBUTTON      "昏力",IDC_DELPLAYER,150,17,29,13
+    LTEXT           "Akas",IDC_STATIC,7,36,17,8
+    LISTBOX         IDC_AKAPLAYERS,7,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "敲饭捞绢 aka 荐沥...",IDC_ADDAKAPLAYER,7,244,172,14
+    LTEXT           "甘",IDC_STATIC,221,7,18,8
+    COMBOBOX        IDC_MAPS,221,17,103,127,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "眠啊...",IDC_ADDMAP,329,17,29,13
+    PUSHBUTTON      "昏力",IDC_DELMAP,364,17,29,13
+    LTEXT           "Akas",IDC_STATIC,221,36,17,8
+    LISTBOX         IDC_AKAMAPS,221,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "甘 aka 荐沥...",IDC_ADDAKAMAP,221,244,171,14
+END
+
+IDD_DLGEDITAKAS_DIALOG DIALOG  0, 0, 320, 234
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Akas 荐沥"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "敲饭捞绢 林 ID",IDC_PLAYERNAME,7,9,62,8
+    EDITTEXT        IDC_MAINNAME,7,21,96,14,ES_AUTOHSCROLL
+    LTEXT           "Akas (茄 临俊 窍唱)",IDC_STATIC,7,41,77,8
+    EDITTEXT        IDC_AKAS,7,54,158,140,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "眠玫",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,184,20,55,10
+    CONTROL         "葛电 ID",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,244,20,53,10
+    LTEXT           "八祸 :",IDC_STATIC,187,39,38,8
+    EDITTEXT        IDC_SEARCHFOR,228,36,85,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_SUGGESTIONS,182,54,131,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< ID甫 akas俊 眠啊",IDC_ADDAKA,182,180,131,14
+    DEFPUSHBUTTON   "犬牢",IDOK,205,213,50,14
+    PUSHBUTTON      "秒家",IDCANCEL,263,213,50,14
+    GROUPBOX        "",IDC_STATIC,-7,199,341,40
+END
+
+IDD_PROGRESSBAR DIALOG  0, 0, 230, 14
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "府敲饭捞 肺爹 窍绰 悼救 泪瘪 扁促妨林技夸..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,0,0,230,14
+END
+
+IDD_DLGOPTIONS DIALOG  0, 0, 349, 237
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Default",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,234,159,39,10
+    CONTROL         "English",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,234,172,43,10
+    CONTROL         "Korean",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,287,160,43,10
+    CONTROL         "Chinese",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,287,172,43,10
+    GROUPBOX        "府敲饭捞 单捞磐海捞胶",IDC_STATIC,4,6,338,101
+    CONTROL         """郴 巩辑""俊 历厘",IDC_RADIOSAVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,19,95,10
+    CONTROL         "bwchart.exe啊 乐绰 弃歹俊 历厘",IDC_RADIOSAVE2,"Button",BS_AUTORADIOBUTTON,109,19,97,10
+    PUSHBUTTON      "(replays.txt) 瘤快扁",IDC_CLEAR,227,17,91,14
+    CONTROL         ".rep 颇老苞 bwchart.exe阑 楷搬 矫糯",IDC_FILEASSO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,35,194,10
+    CONTROL         "啊厘 弥辟俊 敲饭捞茄 霸烙阑 磊悼栏肺 眠啊窍绊 钎矫 (府敲饭捞 历厘矫)",IDC_AUTOADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,50,292,10
+    CONTROL         "矫累 且 锭 付瘤阜栏肺 夯 府敲饭捞甫 肺靛",IDC_AUTOLOAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,65,177,10
+    CONTROL         "矫累矫俊 府敲饭捞 单捞磐海捞胶 肺靛 (捞 汲沥阑 荤侩窍瘤 臼阑 版快俊, 货肺绊魔阑 喘矾辑 肺靛 矫糯)",IDC_AUTOLOADDB,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,11,78,323,23
+    GROUPBOX        "荐惑茄 青悼",IDC_STATIC,4,113,338,27
+    LTEXT           "捞 矫埃 捞饶狼 青悼 公矫 :",IDC_STATIC,11,125,94,8
+    EDITTEXT        IDC_SUSPECT_LIMIT,112,123,27,13,ES_AUTOHSCROLL
+    LTEXT           "盒   ",IDC_STATIC,145,125,106,8
+    GROUPBOX        "诀单捞飘 八祸",IDC_STATIC,4,146,216,44
+    PUSHBUTTON      "角矫埃 诀单捞飘",IDC_CHECKUPDATE,10,162,98,14
+    CONTROL         "矫累矫俊 磊悼 八祸",IDC_AUTOCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,114,165,95,10
+    GROUPBOX        "Language",IDC_STATIC,225,146,116,44
+END
+
+IDD_DLGMAP_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "甘"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "扒拱",IDC_BUILDON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,184,43,10
+    PUSHBUTTON      "&Animate",IDC_ANIMATE,93,183,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,127,183,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,140,183,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,154,183,13,10,WS_DISABLED
+    CONTROL         "固匙饿",IDC_MINERALON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,184,43,10
+END
+
+IDD_DLGFASTAKA_DIALOG DIALOG  0, 0, 319, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Akas 诀单捞飘"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Player 1 :",IDC_STATIC,7,9,30,8
+    EDITTEXT        IDC_PLAYER1,47,7,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "狼 aka绰 >>",IDC_ASSO1,139,7,64,13
+    COMBOBOX        IDC_LISTPLAYERS1,215,7,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Player 2 :",IDC_STATIC,7,28,30,8
+    EDITTEXT        IDC_PLAYER2,47,25,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "狼 aka绰  >>",IDC_ASSO2,139,25,64,13
+    COMBOBOX        IDC_LISTPLAYERS2,215,25,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "甘 :",IDC_STATIC,7,47,19,8
+    EDITTEXT        IDC_MAP,47,44,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "狼 aka绰  >>",IDC_ASSO3,139,44,64,13
+    COMBOBOX        IDC_LISTMAPS,215,44,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "摧扁",IDCANCEL,262,76,50,14
+    GROUPBOX        "",IDC_STATIC,-9,64,339,40
+    LTEXT           "篮 捞固 aka 涝聪促.",IDC_TEXT1,139,10,64,8,NOT WS_VISIBLE
+    LTEXT           "篮 捞固 aka 涝聪促.",IDC_TEXT2,139,27,64,8,NOT WS_VISIBLE
+    LTEXT           "篮 捞固 aka 涝聪促.",IDC_TEXT3,139,47,64,8,NOT WS_VISIBLE
+END
+
+IDD_DLGOPTIONS1 DIALOGEX 0, 0, 445, 253
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "宏风靛 况啊 矫累窍绊 措扁 且 矫埃 :",-1,6,6,128,8
+    EDITTEXT        IDC_TIMEWAIT,154,4,40,14,ES_AUTOHSCROLL
+    LTEXT           "1/1000檬 (扁夯蔼篮 3000)",-1,199,7,97,8
+    CONTROL         "磊悼 虐",IDC_AUTOKEYS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,298,7,47,10
+    LTEXT           "府敲饭捞 犁积矫 窜绵虐 鉴辑 :",-1,6,25,128,8
+    EDITTEXT        IDC_KEYSEQ,154,23,56,14,ES_AUTOHSCROLL
+    LTEXT           "扁夯蔼篮 SEORO*O",-1,216,27,66,8
+    LTEXT           "坷府瘤澄 府敲饭捞 犁积矫 窜绵虐 鉴荐 :",-1,6,44,146,8
+    EDITTEXT        IDC_KEYSEQ2,154,42,56,14,ES_AUTOHSCROLL
+    LTEXT           "扁夯蔼篮 SSORO*O",-1,216,46,66,8
+    LTEXT           "涝仿荤捞俊 措矫 矫埃 :",-1,6,63,128,8
+    EDITTEXT        IDC_TIMEWAIT2,154,61,40,14,ES_AUTOHSCROLL
+    LTEXT           "1/1000 檬 (扁夯蔼篮 1500)",-1,199,64,90,8
+    LTEXT           "宏风靛 况 1.16 .exe 颇老 困摹 :",-1,7,82,104,8
+    EDITTEXT        IDC_BWEXE116,155,81,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV16,365,81,18,14
+    LTEXT           "宏风靛 况 1.15 .exe 颇老 困摹 :",-1,5,101,104,8
+    EDITTEXT        IDC_BWEXE115,154,100,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV15,364,100,18,14
+    LTEXT           "宏风靛 况 1.14 .exe 颇老 困摹 :",-1,6,121,128,8
+    EDITTEXT        IDC_BWEXE114,154,118,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV14,364,118,18,14
+    LTEXT           "宏风靛 况 1.13 .exe 颇老 困摹 :",-1,6,141,128,8
+    EDITTEXT        IDC_BWEXE113,154,138,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV13,364,138,18,14
+    LTEXT           "宏风靛 况 1.12 .exe 颇老 困摹 :",-1,6,161,128,8
+    EDITTEXT        IDC_BWEXE112,154,158,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV12,364,158,18,14
+    LTEXT           "宏风靛 况 1.11 .exe 颇老 困摹 :",-1,6,179,128,8
+    EDITTEXT        IDC_BWEXE111,154,177,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV11,363,177,18,14
+    LTEXT           "宏风靛 况 1.10 .exe 颇老 困摹:",-1,6,199,128,8
+    EDITTEXT        IDC_INSTALLPATH,154,196,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIR,363,196,18,14
+    LTEXT           "宏风靛 况 1.09 .exe 颇老 困摹 :",-1,6,219,128,8
+    EDITTEXT        IDC_BWEXE109,154,216,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,363,216,18,14
+    GROUPBOX        "窜绵虐",-1,355,4,82,67
+    LTEXT           "*  酒贰 拳混钎",-1,363,17,66,8
+    LTEXT           "?  困 拳混钎",-1,363,28,66,8
+    LTEXT           "$  Home 虐",-1,363,39,34,8
+    LTEXT           "=  OK 滚瓢 努腐",-1,363,52,69,8
+    LTEXT           "RWA Player 困摹 :",-1,6,239,128,8
+    EDITTEXT        IDC_BWPLAYER,153,236,158,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEPLAYER,314,236,18,14
+    CONTROL         "磊悼 角青",IDC_AUTOSTARTRWA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,338,239,51,10
+END
+
+IDD_DLGOPTIONS_CHART DIALOGEX 0, 0, 338, 283
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "弊贰橇俊 传陛 钎矫",IDC_BGGRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,4,84,10
+    CONTROL         "弥绊 APM 钎矫",IDC_MAXAPMMARKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,4,65,10
+    CONTROL         "Background gradient",IDC_BGGRADIENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,166,4,82,10
+    CONTROL         "Action 格废 祸栏肺 备盒",IDC_COLOREDEVENTLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,4,77,10
+    LTEXT           "硅版 捞固瘤 :",IDC_STATIC,4,23,47,8
+    EDITTEXT        IDC_BMPPATH,54,22,176,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEBMP,233,22,20,13
+    CONTROL         "硅版 捞固瘤 钎矫",IDC_USEBMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,24,77,10
+    CONTROL         "啊款单",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,51,43,40,10
+    CONTROL         "鸥老",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,97,43,34,10
+    CONTROL         "疵覆",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,138,43,39,10
+    LTEXT           "钎矫 规过 :",IDC_STATIC,4,43,42,8
+    GROUPBOX        "固府 焊扁",IDC_PREVIEW,4,61,321,154
+    LTEXT           "甘 捞抚 : ",IDC_STATIC,10,229,40,8
+    CONTROL         "",IDC_COLOR_MAPNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,55,227,20,12
+    LTEXT           "敲饭捞绢 捞抚 :",IDC_STATIC,86,229,60,8
+    CONTROL         "",IDC_COLOR_PLAYERNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,149,227,20,12
+    GROUPBOX        "臂揪 祸",IDC_STATIC,4,216,321,30
+    LTEXT           "扁鸥 :",IDC_STATIC,181,229,42,8
+    CONTROL         "",IDC_COLOR_OTHER,"Static",SS_BLACKRECT | NOT WS_VISIBLE,229,227,20,12
+    PUSHBUTTON      "扁夯蔼",IDC_DEFAULTS,270,227,50,12
+    GROUPBOX        "弊贰橇 祸",IDC_STATIC,4,249,321,30
+    LTEXT           "&Type :",IDC_STATIC,9,264,21,8
+    COMBOBOX        IDC_COMBOTYPE,33,261,85,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_COLOR_CHART,"Static",SS_BLACKRECT | NOT WS_VISIBLE,128,261,20,12
+    PUSHBUTTON      "扁夯蔼",IDC_DEFAULTS2,269,261,50,12
+    LTEXT           "急 苯扁 : ",IDC_STATIC,158,264,34,8
+    COMBOBOX        IDC_COMBOLSIZE,193,261,35,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BWCHART_DIALOG DIALOGEX 0, 0, 536, 364
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "凯扁...",IDC_GETEVENTS,7,0,34,14
+    PUSHBUTTON      "眠啊...",IDC_ADDEVENT,48,0,34,14
+    LTEXT           "钎 :",IDC_STATIC,92,3,22,8
+    COMBOBOX        IDC_CHARTTYPE,115,0,91,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "茄 俺狼 弊贰橇 困俊 葛电 敲饭捞绢 钎矫",IDC_SINGLECHART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,160,10
+    LTEXT           "犬措 :",IDC_STATIC,218,3,23,8
+    COMBOBOX        IDC_ZOOM,244,0,32,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "固匙饿",IDC_MINERALS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,283,0,42,10
+    CONTROL         "啊胶",IDC_GAZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,283,11,29,10
+    CONTROL         "牢备荐",IDC_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,283,22,37,10
+    CONTROL         "Macro",IDC_SPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,283,33,36,10
+    CONTROL         "蜡粗荐",IDC_UNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,0,32,10
+    CONTROL         "&Hot points",IDC_HOTPOINTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,11,48,10
+    CONTROL         "扒拱 积魂",IDC_BPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,22,51,10
+    CONTROL         "蜡粗 积魂",IDC_UPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,33,52,10
+    CONTROL         "檬 窜困",IDC_USESECONDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,0,44,10
+    CONTROL         "A&ctions",IDC_ACTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,11,39,10
+    CONTROL         "龟盒啦",IDC_PERCENTAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,33,42,10
+    CONTROL         "呼靛 坷歹俊 蜡粗 钎矫",IDC_UNITSONBO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,22,93,10
+    CONTROL         "窜绵虐 荤侩",IDC_HKSELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,0,71,10
+    CONTROL         "厚啦 奴 鉴辑肺 钎矫",IDC_SORTDIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,11,85,10
+    PUSHBUTTON      "甘 钎矫",IDC_SEEMAP,403,225,41,11,WS_DISABLED
+    PUSHBUTTON      "&Animate",IDC_ANIMATE,445,225,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,479,226,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,492,225,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,506,226,13,10,WS_DISABLED
+    CONTROL         "List1",IDC_LISTEVENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,258,354,86
+    PUSHBUTTON      "档框富",IDC_DHELP,502,349,34,11
+    SCROLLBAR       IDC_SCROLLBAR1,7,225,338,11
+    LTEXT           "敲饭捞绢 ID甫 歹喉 努腐窍搁 沥焊 钎矫甫 炼例 且 荐 乐嚼聪促",IDC_DBLCLICK,273,351,219,8
+    PUSHBUTTON      "角氰 府敲饭捞 肺靛",IDC_TESTREPLAYS,521,4,73,9,NOT WS_VISIBLE
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,521,14,49,11
+    SCROLLBAR       IDC_SCROLLBAR2,518,25,10,201,SBS_VERT | WS_DISABLED
+    LTEXT           "醚矫埃 00:00:00",IDC_GAMEDURATION,7,20,100,8
+    LTEXT           "00:00:00",IDC_EXACTTIME,363,227,31,8
+    LTEXT           "",IDC_ANIMSPEED,252,34,20,8
+    CONTROL         "急琶",IDC_FLT_SELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,246,32,10
+    CONTROL         "扒拱 窿扁",IDC_FLT_BUILD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,246,48,10
+    CONTROL         "蜡粗 积魂",IDC_FLT_TRAIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,246,49,10
+    CONTROL         "荐惑茄 青悼",IDC_FLT_SUSPECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,184,246,72,10
+    CONTROL         "Hack",IDC_FLT_HACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,261,246,48,10
+    CONTROL         "Chat",IDC_FLT_CHAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,299,246,48,10
+    CONTROL         "List1",IDC_PLSTATS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,393,244,135,101
+    CONTROL         "扁鸥",IDC_FLT_OTHERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,246,33,10
+    PUSHBUTTON      "促澜",IDC_NEXT_SUSPECT,323,346,38,12
+    CONTROL         "",IDC_SUSPECT_INFO,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,346,313,13
+    CONTROL         "",IDC_REPLAYFILE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,34,241,8
+    COMBOBOX        IDC_APMSTYLE,440,33,66,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DLGRENAME_DIALOG DIALOG  0, 0, 320, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "捞抚 绊摹扁"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Name &format :",IDC_STATIC,7,9,45,8
+    EDITTEXT        IDC_FORMAT,53,7,95,13,ES_AUTOHSCROLL
+    LTEXT           ".rep",IDC_STATIC,154,9,13,8
+    LTEXT           "(limit is 27 characters for the replay filename)",IDC_STATIC,174,10,139,8
+    LTEXT           "&Replace :",IDC_STATIC,7,108,32,8
+    EDITTEXT        IDC_USERDEF1,43,105,35,13,ES_AUTOHSCROLL
+    LTEXT           "with",IDC_STATIC,85,108,14,8
+    EDITTEXT        IDC_REPLACEMENT1,107,105,40,13,ES_AUTOHSCROLL
+    LTEXT           "Use this for user defined replacements",IDC_STATIC,161,107,121,8
+    PUSHBUTTON      "Default Format",IDC_DEFAULT,246,29,58,14
+    CONTROL         "List1",IDC_REPLAYS,"SysListView32",LVS_REPORT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,127,306,123
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,7,259,182,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,259,50,14
+    LTEXT           "- Use %p1 marker for player 1 and %p2 for player 2",IDC_STATIC,8,26,159,8
+    LTEXT           "- Use %t1 marker for race of player 1 and %t2 for race of player 2",IDC_STATIC,8,36,203,8
+    DEFPUSHBUTTON   "Rename",IDC_RENAME,206,259,50,14
+    LTEXT           "- Use %map marker for first letters of map name",IDC_STATIC,8,57,148,8
+    LTEXT           "- Use %apm1 and %apm2 markers for players APM",IDC_STATIC,8,67,159,8
+    LTEXT           "- Use %gmt marker for game type (other than 1v1)",IDC_STATIC,8,77,156,8
+    LTEXT           "- Markers can be omitted",IDC_STATIC,8,87,79,8
+    LTEXT           "- Use %pos1 marker for position of player 1 and %pos2 for position of player 2",IDC_STATIC,8,47,242,8
+END
+
+IDD_EXPORTCOACHDLG_DIALOG DIALOG  0, 0, 268, 246
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BWCoach training颇老肺 眠免 "
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "汲疙",IDC_STATIC,7,7,254,53
+    LTEXT           "父电捞 :",IDC_STATIC,14,21,48,8
+    EDITTEXT        IDC_AUTHOR,64,19,80,14,ES_AUTOHSCROLL
+    LTEXT           "力格 :",IDC_STATIC,150,21,24,8
+    EDITTEXT        IDC_TITLE,177,19,78,14,ES_AUTOHSCROLL
+    LTEXT           "汲疙 :",IDC_STATIC,14,41,48,8
+    EDITTEXT        IDC_DESC,64,39,191,14,ES_AUTOHSCROLL
+    GROUPBOX        "汲沥",IDC_STATIC,7,61,254,53
+    LTEXT           "呼靛 坷歹 眠免 吝窜 矫埃 :",IDC_STATIC,15,75,97,8
+    EDITTEXT        IDC_DURATION,119,72,37,14,ES_AUTOHSCROLL
+    LTEXT           "盒",IDC_STATIC,162,75,25,8
+    CONTROL         "蜡粗 积魂 器窃",IDC_EXPORTUNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,93,81,10
+    CONTROL         "老槽 积魂 器窃",IDC_EXPORTWORKERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,93,101,10
+    LTEXT           "沥焊 眠免且 敲饭捞绢 急琶",IDC_STATIC,7,122,150,8
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,136,254,82
+    DEFPUSHBUTTON   "眠免",IDOK,144,225,50,14
+    PUSHBUTTON      "秒家",IDCANCEL,211,225,50,14
+END
+
+IDD_MAIN_OPTIONS DIALOG  0, 0, 425, 252
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,7,411,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUPREPLAY MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "府敲饭捞 凯扁",                     ID_F_LOADREPLAY
+        MENUITEM "府敲饭捞 捞亥飘 眠啊",                 ID__ADDREPLAYEVENTS
+        MENUITEM "汲疙 荐沥窍扁",                     ID__EDITCOMMENTS
+        MENUITEM "磊林 焊绰 府敲饭捞俊 眠啊",              ID__ADDTOFAVORITES
+        MENUITEM "Akas 眠啊",                     ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        POPUP "府敲饭捞 皑惑"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "磊悼",                          ID__WATCHREPLAYINBW_AUTO
+        END
+        POPUP "颇老"
+        BEGIN
+            MENUITEM "弃歹 凯扁",                       ID__OPENDIRECTORY
+            MENUITEM "绒瘤烹栏肺 捞悼",                    ID__FILE_MOVETORECYCLEBIN
+            MENUITEM "促弗 弃歹肺 捞悼",                   ID__MOVETOFOLDER
+            MENUITEM "捞抚 官操扁",                      ID__FILE_RENAME
+        END
+    END
+END
+
+IDR_POPUPPLAYER MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "敲饭捞绢 昏力",                     ID__REMOVEPLAYER
+        MENUITEM "钎矫/钎矫救窃",                     ID__ENABLEDISABLE
+    END
+END
+
+IDR_POPUPFAV MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "府敲饭捞 凯扁",                     ID_F_LOADREPLAY
+        MENUITEM "府敲饭捞 捞亥飘 眠啊",                 ID__ADDREPLAYEVENTS
+        MENUITEM "汲疙 荐沥窍扁",                     ID__EDITCOMMENTS
+        MENUITEM "磊林焊绰 府敲饭捞 格废俊辑 哗扁",           ID__REMOVEFAVORITES
+        MENUITEM "Akas 眠啊",                     ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        MENUITEM "府敲饭捞 皑惑",                     ID__WATCHREPLAYINBW
+    END
+END
+
+IDR_POPPLAYERS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "府敲饭捞 钎矫",                     ID_G_LISTREPLAYS
+    END
+END
+
+IDR_POPUPREPLAYMULT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "磊林焊绰 府敲饭捞俊 眠啊",               ID__ADDTOFAVORITES
+        MENUITEM "绒瘤烹栏肺 捞悼",                    ID__FILE_MOVETORECYCLEBIN
+        MENUITEM "促弗 弃歹肺 捞悼",                   ID__MOVETOFOLDER
+        MENUITEM "捞抚 官操扁",                      ID__FILE_RENAME
+    END
+END
+
+IDR_WATCHREP MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "府敲饭捞 皑惑"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "磊悼",                          ID__WATCHREPLAYINBW_AUTO
+        END
+    END
+END
+
+IDR_MENU_EVENTS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "眠免窍扁"
+        BEGIN
+            MENUITEM "咆胶飘 颇老",                      ID_FF_EXPORT_TOTEXTFILE
+            MENUITEM "&BWCoach...",                 ID__EXPORTTO_BWCOACH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLGHELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_DLGBWCHART_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DLGBROWSER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGFAVORITES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITCOMMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_DLGAKAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITAKAS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_PROGRESSBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 7
+    END
+
+    IDD_DLGOPTIONS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 342
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLGMAP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DLGFASTAKA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DLGOPTIONS_CHART, DIALOG
+    BEGIN
+        RIGHTMARGIN, 331
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLGOPTIONS_CHART DLGINIT
+BEGIN
+    IDC_COMBOTYPE, 0x403, 8, 0
+0x694d, 0x656e, 0x6172, 0x006c, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x6147, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 7, 0
+0x7553, 0x7070, 0x796c, "\000" 
+    IDC_COMBOTYPE, 0x403, 6, 0
+0x6e55, 0x7469, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x5041, 0x004d, 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5042, 0x204d, 0x6228, 0x6975, 0x646c, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5054, 0x204d, 0x7428, 0x6172, 0x6e69, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 13, 0
+0x614d, 0x2070, 0x6f43, 0x6576, 0x6172, 0x6567, "\000" 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0033, 
+    0
+END
+
+IDD_BWCHART_DIALOG DLGINIT
+BEGIN
+    IDC_ZOOM, 0x403, 2, 0
+0x0031, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0032, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0034, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0038, 
+    IDC_ZOOM, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_ZOOM, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_APMSTYLE, 0x403, 10, 0
+0x6556, 0x7972, 0x6620, 0x616c, 0x0074, 
+    IDC_APMSTYLE, 0x403, 5, 0
+0x6c46, 0x7461, "\000" 
+    IDC_APMSTYLE, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_APMSTYLE, 0x403, 8, 0
+0x7944, 0x616e, 0x696d, 0x0063, 
+    IDC_APMSTYLE, 0x403, 13, 0
+0x6556, 0x7972, 0x4420, 0x6e79, 0x6d61, 0x6369, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOXMENU        "&Bwchart俊 措窍夸"
+    IDS_DELETEAKAS          "<%s>狼 aka甫 傈何 瘤快摆嚼聪鳖?"
+    IDS_EMPTYDB             "府敲饭捞 格废捞 厚菌嚼聪促.\r\n '%s'俊 乐绰 府敲饭捞甫 眠啊窍摆嚼聪鳖? \r\n\r\n(秒家甫 穿福搁 促矫 汞瘤 臼嚼聪促)"
+    IDS_ONEREPLAYADDED      "%d俺狼 府敲饭捞啊 格废俊 眠啊登菌嚼聪促."
+    IDS_MULREPLAYADDED      "%d俺狼 府敲饭捞啊 格废俊 眠啊登菌嚼聪促."
+    IDS_CORRUPTED           "%d俺狼 府敲饭捞俊 坷幅啊 乐嚼聪促:\r\n"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MOREREPLAYS         "\r\n\r\nBWChart啊 公矫窍绰 弃歹肺 府敲饭捞甫 颗扁摆嚼聪鳖??"
+    IDS_REMOVEREP           "<%s>篮 歹 捞惑 粮犁窍瘤 臼嚼聪促.\r\n 格废俊辑 力芭窍摆嚼聪鳖?"
+    IDS_EMPTYBWPATH         "Brood War 角青 颇老阑 茫瘤 给沁嚼聪促. '汲沥'阑 犬牢窍技夸."
+    IDS_CANTSTARTBW         "Brood War甫 角青 且 荐 绝菌嚼聪促. '汲沥'阑 犬腮窍技夸."
+    IDS_NOBWWINDOW          "Brood War 芒阑 茫捞 给沁嚼聪促 (矫累窍绰 呈公 坷贰 吧啡阑瘤档 葛辅聪促)"
+    IDS_CANTCOPY            "府敲饭捞 颇老阑 BWChart 弃歹肺 汗荤且 荐 绝菌嚼聪促."
+    IDS_REMOVEDMISSING      "%d俺狼 茫瘤 给茄 府敲饭捞啊 格废俊辑 昏力登菌嚼聪促."
+    IDS_AKAEXIST            "捞固 aka格废捞 乐嚼聪促."
+    IDS_REFRESHBROWSER      "%s 格废捞 厚菌嚼聪促. 府敲饭捞甫 促矫 八祸窍摆嚼聪鳖?"
+    IDS_PLAYERS             "敲饭捞绢"
+    IDS_MAPS                "甘"
+    IDS_MOVEREP             "府敲饭捞 格废阑 货肺款 困摹肺 捞悼矫虐摆嚼聪鳖?"
+    IDS_CORRUPTEDBIS        "<%s>俊 坷幅啊 乐嚼聪促"
+    IDS_CANTLOAD            "%s阑 凯 荐 绝菌嚼聪促"
+    IDS_CANTCREATFILE       "颇老阑 父甸 荐 绝嚼聪促"
+    IDS_CORRUPTED3          "<%s>\r\n俊 坷幅啊 乐嚼聪促. 府敲饭捞 格废俊辑 昏力窍技夸"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DELETEALL           "府敲饭捞 格废俊辑 颇老阑 瘤快摆嚼聪鳖 (replays.txt) ?"
+    IDS_FORMATCHG           "府敲饭捞 格废 规侥捞 官差菌嚼聪促.\r\n\r\n ""货肺绊魔"" 滚瓢阑 喘矾辑 促矫 累己秦具钦聪促. 榴败焊绰 府敲饭捞 格废阑 酪霸 邓聪促.\r\n\r\n 货 规侥阑 烹秦 瞒饶 诀单捞飘 锭 格废阑 焊粮 且 荐 乐嚼聪促.\r\n\r\n阂祈窍霸 秦辑 了价钦聪促."
+    IDS_SUSPICIOUS          "狼缴胶矾款 青悼 (%d)"
+    IDS_COL_TIME            "矫埃"
+    IDS_COL_PLAYER          "敲饭捞绢"
+    IDS_COL_ACTION          "Action"
+    IDS_COL_PARAMETERS      "Parameters"
+    IDS_COL_UNITSID         "蜡粗 ID"
+    IDS_COL_ACTIONS         "Actions"
+    IDS_COL_APM             "APM"
+    IDS_COL_NULL            "Null"
+    IDS_COL_VAPM            "VAPM"
+    IDS_COL_MINERAL         "固匙饿"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAS             "啊胶"
+    IDS_COL_SUPPLY          "牢备荐"
+    IDS_COL_UNITS           "蜡粗"
+    IDS_COL_APMPM           "APM+/-"
+    IDS_COL_APMMAX          "APM 弥措"
+    IDS_COL_APMMIN          "APM 弥家"
+    IDS_COL_BASE            "困摹"
+    IDS_COL_REPLAYNAME      "府敲饭捞 捞抚"
+    IDS_COL_PLAYER1         "Player 1"
+    IDS_COL_APM1            "APM 1"
+    IDS_COL_PLAYER2         "Player 2"
+    IDS_COL_APM2            "APM 2"
+    IDS_COL_MAP             "甘"
+    IDS_COL_DURATION        "霸烙 矫埃"
+    IDS_COL_TYPE            "辆幅"
+    IDS_COL_RWAAUTHOR       "RWA 累啊"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAMEDATE        "霸烙 朝楼"
+    IDS_COL_ENGINE          "Engine"
+    IDS_COL_COMMENT         "秦汲"
+    IDS_COL_DIRECTORY       "弃歹"
+    IDS_COL_FILEDATE        "颇老 朝楼"
+    IDS_COL_POS1            "困摹 1"
+    IDS_COL_POS2            "困摹 2"
+    IDS_COL_PLAYERNAME      "敲饭捞绢 捞抚"
+    IDS_COL_AVGAPM          "乞闭 APM"
+    IDS_COL_PERCDEV         "函悼 %"
+    IDS_COL_GAMESPLAYED     "霸烙 荐"
+    IDS_COL_ZERGPERC        "Zerg%"
+    IDS_COL_RANPERC         "Ran%"
+    IDS_COL_TOSSPERC        "Toss%"
+    IDS_COL_MAPNAME         "甘 捞抚"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNITS               "蜡粗"
+    IDS_CT_RESOURCES        "磊盔"
+    IDS_CT_UNITDIST         "蜡粗 硅盒"
+    IDS_CT_ACTIONDIST       "Action 硅盒"
+    IDS_CT_BUILDDIST        "扒拱 硅盒"
+    IDS_CT_UPGRADES         "诀弊饭捞靛"
+    IDS_CT_APMDIST          "APM 硅盒"
+    IDS_CT_BO               "呼靛 坷歹"
+    IDS_CT_HOTKEYS          "窜绵虐"
+    IDS_CT_APM              "APM"
+    IDS_COL_MICRO           "Micro"
+    IDS_COL_MACRO           "Macro"
+    IDS_COL_AVGAPMAST       "乞闭 APM T"
+    IDS_COL_AVGAPMASZ       "乞闭 APM Z"
+    IDS_COL_AVGAPMASP       "乞闭 APM P"
+    IDS_MINIMAPPING         "Ping"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_AVGGAMEDURATION "乞闭 霸烙 矫埃"
+    IDS_WATCHREPLAY         "府敲饭捞 焊扁"
+    IDS_CHARTS              "钎"
+    IDS_OTHEROPTIONS        "扁鸥 汲沥"
+    IDS_MKDURATION          "霸烙 辨捞: %s@%s"
+    IDS_DROP                "靛而"
+    IDS_EXPAND              "犬厘"
+    IDS_LEAVE               "版扁 唱皑"
+    IDS_MINGAS              "固匙饿 && 啊胶"
+    IDS_SUPPLYUNIT          "牢备荐 && 蜡粗"
+    IDS_AUDIOCOMMENT        " (%s狼 澜己 秦汲)"
+    IDS_TOTAL               "[钦拌 = %d]"
+    IDS_ANIMATE             "&Animate"
+    IDS_STOP                "&Stop"
+    IDS_BUILDS              "扒汲"
+    IDS_MOVES               "捞悼"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_BOCOUNT         "Count"
+    IDS_COL_BOCONTENT       "Build order"
+    IDS_COL_BOPERCENT       "%"
+    IDS_HACK                "Hack (%d)"
+    IDS_HACKCOUNT           "Hacks"
+    IDS_CT_MIX_APMHOTKEYS   "APM+Hot Keys"
+    IDS_CT_MAPCOVERGAGE     "Map Coverage"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 220, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About bwchart"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,18,11,20,20
+    LTEXT           "BWChart version 1.00A",IDC_VERSION,46,10,106,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003 JCA",IDC_STATIC,46,22,109,8
+    DEFPUSHBUTTON   "OK",IDOK,85,148,50,14,WS_GROUP
+    LTEXT           "Replay parser assembled by various people, including : HurtnTime, Brefan, Fractaled, WilliamWC3, Jca.",IDC_STATIC,31,44,175,19
+    LTEXT           "Thanks to everyone for technical help, suggestions, bugs, beta-testing, etc.",IDC_STATIC,31,68,175,19
+    LTEXT           "For updates, please visit",IDC_STATIC,31,127,82,10
+    LTEXT           "Static",IDC_URL,114,127,99,8,NOT WS_GROUP
+    LTEXT           "Big thanks to Waxangel (nocoolnick@hotmail.com) for the translation in Korean, Emlary (hattie7@21cn.com) && SeBASTa for the translation in Chinese.",IDC_STATIC,32,92,175,30
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\idr_main.ico"
+IDI_ICON_OK             ICON                    "res\\icon1.ico"
+IDI_ICON_DISABLE        ICON                    "res\\icon_ok1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTFILE
+//
+
+IDR_TEXTMAPAKAS         TEXTFILE                "res\\bwchart_mapakas.txt"
+IDR_TEXTAKAS            TEXTFILE                "res\\bwchart_akas.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040c04b0"
+        BEGIN
+            VALUE "Comments", "Don't we love this game?"
+            VALUE "CompanyName", "Gosu Incorporated"
+            VALUE "FileDescription", "BW Replay Charter"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "bwchart"
+            VALUE "LegalCopyright", "Copyright (C) 2003 JCA"
+            VALUE "OriginalFilename", "bwchart.exe"
+            VALUE "ProductName", "BW Chart"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x40c, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGHELP_DIALOG DIALOG  0, 0, 327, 266
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,138,245,50,14
+    LTEXT           "Actions",IDC_STATIC,7,7,24,8
+    LTEXT           "An action is either a click or a keyboard shortcut performed by the player. All other events happening in the game are not recorded in the replay file. Also, all clicks that are not on units, buildings or resources are not recorded.",IDC_STATIC,58,7,262,30
+    LTEXT           "APM",IDC_STATIC,7,41,16,8
+    LTEXT           "Action Per Minute. It's an average value on the whole game : total number of actions / game duration. The first 1'20 of game is ignored.",IDC_STATIC,58,41,262,18
+    LTEXT           "Null",IDC_STATIC,7,100,13,8
+    LTEXT           "Some actions are called ""null"" because they didn't produce the expected result. For example, trying to build something or train a unit when you're out of minerals. Also, clicking 20 times in a row for an upgrade can produce a bunch of null actions.",IDC_STATIC,58,100,262,28
+    LTEXT           "VAPM",IDC_STATIC,7,147,21,8
+    LTEXT           "Valid Action Per Minute. It's an average value on the whole game. It's the total of all actions, minus the null actions, divided by the game duration.",IDC_STATIC,58,147,262,22
+    LTEXT           "Action Ratio",IDC_STATIC,7,173,40,8
+    LTEXT           "The ratio displayed next to the first two players names is the action ratio (action count of one player / action count of the other)",IDC_STATIC,58,173,262,22
+    LTEXT           "Null actions are marked with an asterisk (*) in the main action list.",IDC_STATIC,58,129,204,10
+    LTEXT           "APM+/-",IDC_STATIC,7,68,26,8
+    LTEXT           "Average APM deviation. Measures the steadiness of your APM. If it's close to 0, it means you played at the same pace during the whole game. If it's high, it means your speed is changing a lot.",IDC_STATIC,58,68,262,25
+    LTEXT           "Base",IDC_STATIC,7,196,17,8
+    LTEXT           "Starting location using the clock notation (12 oclock,  3, 6, etc)",IDC_STATIC,58,196,262,12
+    LTEXT           "Micro",IDC_STATIC,7,213,18,8
+    LTEXT           "APM for micro actions (select, move, attack, siege, etc)",IDC_STATIC,58,213,262,9
+    LTEXT           "Macro",IDC_STATIC,7,227,21,8
+    LTEXT           "APM for macro actions (train, build, hatch,  etc)",IDC_STATIC,58,227,262,9
+END
+
+IDD_DLGBWCHART_DIALOG DIALOG  0, 0, 524, 302
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Charts",IDC_MENU_CHARTS,2,2,81,19
+    PUSHBUTTON      "Replay browser",IDC_MENU_BROWSER,85,2,81,19
+    PUSHBUTTON      "Favorites",IDC_MENU_FAVORITES,168,2,81,19
+    PUSHBUTTON      "Akas",IDC_MENU_AKAS,251,2,81,19
+    PUSHBUTTON      "Options",IDC_MENU_OPTIONS,334,2,81,19
+END
+
+IDD_DLGBROWSER_DIALOG DIALOGEX 0, 0, 480, 265
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Replay &directory :",IDC_STATIC,7,2,56,8
+    EDITTEXT        IDC_DIR,67,0,156,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,223,0,19,12
+    PUSHBUTTON      "&Refresh",IDC_REFRESH,247,0,62,14
+    CONTROL         "Search sub-&folders",IDC_RECURSIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,317,3,75,10
+    LTEXT           "Match up :",IDC_STATIC,7,19,35,8
+    CONTROL         "T",IDC_MUTERRAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,19,21,10
+    CONTROL         "Z",IDC_MUZERG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,19,21,10
+    CONTROL         "P",IDC_MUTOSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,21,10
+    CONTROL         "XvX",IDC_MUXVX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,138,19,29,10
+    CONTROL         "RWA only",IDC_RWAONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,170,19,48,10
+    PUSHBUTTON      "&Add replay...",IDC_ADDREPLAY,247,17,62,14
+    PUSHBUTTON      "&Clean Missing",IDC_CLEANMISSING,317,17,72,14
+    LTEXT           "Player &Filter :",IDC_STATIC,7,37,41,8
+    EDITTEXT        IDC_FPLAYER,67,35,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,37,12,8
+    LTEXT           "0",IDC_REPLAYCOUNT,145,37,203,8
+    LTEXT           "Position Filter :",IDC_STATIC,7,55,46,8
+    EDITTEXT        IDC_FPOSITIONS,67,52,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_POSFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,55,12,8
+    LTEXT           "Enter pairs of positions separated with commas (eg: 12/3, 9/6)",IDC_STATIC,145,54,246,8
+    LTEXT           "Map Filter :",IDC_STATIC,7,72,36,8
+    EDITTEXT        IDC_FMAP,67,70,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAPFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,72,12,8
+    LTEXT           "Separate multiple map names using commas (eg: temple, hunters)",IDC_STATIC,145,72,248,8
+    LTEXT           "Objects in BO:",IDC_STATICBO,7,91,46,8
+    EDITTEXT        IDC_BOMAXOBJ,67,88,30,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,86,11,14
+    CONTROL         "buildings",IDC_BO_BUILDING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,90,43,10
+    CONTROL         "units",IDC_BO_UNIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,90,31,10
+    CONTROL         "research",IDC_BO_RESEARCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,90,43,10
+    CONTROL         "upgrade",IDC_BO_UPGRADE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,227,90,40,10
+    CONTROL         "supply",IDC_BO_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,90,40,10
+    COMBOBOX        IDC_COMBOMU,313,88,36,55,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "vs",IDC_STATICVS,352,91,8,8
+    CONTROL         "T",IDC_MUTERRAN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,364,91,21,10
+    CONTROL         "Z",IDC_MUZERG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,386,91,21,10
+    CONTROL         "P",IDC_MUTOSS2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,91,21,10
+    CONTROL         "List1",IDC_LISTMAPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,57,124,81,26
+    CONTROL         "List1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,144,124,112,61
+    CONTROL         "List1",IDC_LISTPLAYERS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,267,124,67,47
+    LTEXT           "Comment :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "&Edit...",IDC_EDITCOMMENT,444,246,29,12
+    LTEXT           "Display :",IDC_STATIC,62,199,28,8,NOT WS_VISIBLE
+    CONTROL         "repla&ys",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,122,199,38,10
+    CONTROL         "&players",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,169,199,38,10
+    CONTROL         "&maps",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,216,199,33,10
+    CONTROL         "&bos",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,253,199,27,10
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,67,17,175,14
+    LTEXT           "0",IDC_PLAYERCOUNT,122,214,65,8,NOT WS_VISIBLE
+    LTEXT           "0",IDC_MAPCOUNT,196,214,65,8,NOT WS_VISIBLE
+    CONTROL         "Load at startup",IDC_AUTOREFRESH,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,63,156,63,10
+    CONTROL         "Tab1",IDC_VTAB,"SysTabControl32",TCS_VERTICAL | TCS_BUTTONS,7,115,14,149
+    CONTROL         "List1",IDC_LISTBOS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,351,124,81,28
+    LTEXT           "",IDC_BOREPLAYS,433,92,39,8
+    CONTROL         "Filter on selected build orders",IDC_FILTERONBO,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,90,110,10
+END
+
+IDD_DLGFAVORITES DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "List1",IDC_REPS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,20,407,203
+    LTEXT           "0",IDC_REPLAYCOUNT,7,7,65,8
+    LTEXT           "Comment :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "&Edit...",IDC_EDITCOMMENT,413,233,29,12
+END
+
+IDD_DLGEDITCOMMENT_DIALOG DIALOG  0, 0, 320, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit comment"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,306,53,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,203,66,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,66,50,14
+    LTEXT           "Comments are limited to 256 characters",IDC_STATIC,7,68,124,8
+END
+
+IDD_DLGAKAS DIALOG  0, 0, 480, 265
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Players",IDC_STATIC,7,7,24,8
+    COMBOBOX        IDC_PLAYERS,7,17,103,99,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&New...",IDC_ADDPLAYER,115,17,29,13
+    PUSHBUTTON      "&Del",IDC_DELPLAYER,150,17,29,13
+    LTEXT           "Akas",IDC_STATIC,7,36,17,8
+    LISTBOX         IDC_AKAPLAYERS,7,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Edit player akas...",IDC_ADDAKAPLAYER,7,244,172,14
+    LTEXT           "Maps",IDC_STATIC,221,7,18,8
+    COMBOBOX        IDC_MAPS,221,17,103,127,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&New...",IDC_ADDMAP,329,17,29,13
+    PUSHBUTTON      "&Del",IDC_DELMAP,364,17,29,13
+    LTEXT           "Akas",IDC_STATIC,221,36,17,8
+    LISTBOX         IDC_AKAMAPS,221,48,171,189,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Edit map akas...",IDC_ADDAKAMAP,221,244,171,14
+END
+
+IDD_DLGEDITAKAS_DIALOG DIALOG  0, 0, 320, 234
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Akas"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Player main name",IDC_PLAYERNAME,7,9,56,8
+    EDITTEXT        IDC_MAINNAME,7,21,96,14,ES_AUTOHSCROLL
+    LTEXT           "Akas (one per line)",IDC_STATIC,7,41,60,8
+    EDITTEXT        IDC_AKAS,7,54,158,140,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Suggestions",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,184,20,55,10
+    CONTROL         "All names",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,244,20,46,10
+    LTEXT           "&Search for :",IDC_STATIC,187,39,38,8
+    EDITTEXT        IDC_SEARCHFOR,228,36,85,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_SUGGESTIONS,182,54,131,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< Add name to akas",IDC_ADDAKA,182,180,131,14
+    DEFPUSHBUTTON   "OK",IDOK,205,213,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,213,50,14
+    GROUPBOX        "",IDC_STATIC,-7,199,341,40
+END
+
+IDD_PROGRESSBAR DIALOG  0, 0, 186, 15
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Please wait while loading replays..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,0,0,185,14
+END
+
+IDD_DLGOPTIONS DIALOG  0, 0, 349, 237
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Default",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,234,147,39,10
+    CONTROL         "English",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,234,160,43,10
+    CONTROL         "Korean",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,287,148,43,10
+    CONTROL         "Chinese",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,287,160,43,10
+    GROUPBOX        "Replay Database",IDC_STATIC,4,6,338,90
+    CONTROL         "Save in ""My documents""",IDC_RADIOSAVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,19,95,10
+    CONTROL         "Save next to bwchart.exe",IDC_RADIOSAVE2,"Button",BS_AUTORADIOBUTTON,109,19,97,10
+    PUSHBUTTON      "Clear  (replays.txt)",IDC_CLEAR,227,17,91,14
+    CONTROL         "File &association between .rep extension and bwchart.exe",IDC_FILEASSO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,35,194,10
+    CONTROL         "Add and dis&play automatically latest game played (when replay is saved)",IDC_AUTOADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,50,241,10
+    CONTROL         "Load last replay at startup",IDC_AUTOLOAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,65,97,10
+    CONTROL         "Load replay database at startup ( otherwise, click Refresh to load the database )",IDC_AUTOLOADDB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,80,267,10
+    GROUPBOX        "Suspicious events",IDC_STATIC,4,101,338,27
+    LTEXT           "Ignore events after :",IDC_STATIC,11,113,64,8
+    EDITTEXT        IDC_SUSPECT_LIMIT,79,111,27,13,ES_AUTOHSCROLL
+    LTEXT           "minutes   (reload replay to refresh)",IDC_STATIC,111,113,106,8
+    GROUPBOX        "Check for updates",IDC_STATIC,4,134,215,45
+    PUSHBUTTON      "Check for &updates now",IDC_CHECKUPDATE,10,150,98,14
+    CONTROL         "Auto check at startup",IDC_AUTOCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,152,84,10
+    GROUPBOX        "Language",IDC_STATIC,225,134,116,44
+    PUSHBUTTON      "TEST",IDC_BUTTON1,42,194,50,14,NOT WS_VISIBLE
+END
+
+IDD_DLGMAP_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Map"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Buildings",IDC_BUILDON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,184,43,10
+    PUSHBUTTON      "&Animate",IDC_ANIMATE,93,183,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,127,183,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,140,183,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,154,183,13,10,WS_DISABLED
+    CONTROL         "Minerals",IDC_MINERALON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,184,43,10
+END
+
+IDD_DLGFASTAKA_DIALOG DIALOG  0, 0, 319, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Update akas"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Player 1 :",IDC_STATIC,7,9,30,8
+    EDITTEXT        IDC_PLAYER1,47,7,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Is an aka for >>",IDC_ASSO1,139,7,64,13
+    COMBOBOX        IDC_LISTPLAYERS1,215,7,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Player 2 :",IDC_STATIC,7,28,30,8
+    EDITTEXT        IDC_PLAYER2,47,25,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Is an aka for >>",IDC_ASSO2,139,25,64,13
+    COMBOBOX        IDC_LISTPLAYERS2,215,25,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Map :",IDC_STATIC,7,47,19,8
+    EDITTEXT        IDC_MAP,47,44,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Is an aka for >>",IDC_ASSO3,139,44,64,13
+    COMBOBOX        IDC_LISTMAPS,215,44,97,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Close",IDCANCEL,262,76,50,14
+    GROUPBOX        "",IDC_STATIC,-9,64,339,40
+    LTEXT           "is already an aka for",IDC_TEXT1,139,10,64,8,NOT WS_VISIBLE
+    LTEXT           "is already an aka for",IDC_TEXT2,139,27,64,8,NOT WS_VISIBLE
+    LTEXT           "is already an aka for",IDC_TEXT3,139,47,64,8,NOT WS_VISIBLE
+END
+
+IDD_DLGOPTIONS1 DIALOGEX 0, 0, 445, 253
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Time to wait after BW starts :",-1,6,6,92,8
+    EDITTEXT        IDC_TIMEWAIT,104,4,40,14,ES_AUTOHSCROLL
+    LTEXT           "milliseconds (default is 3000)",-1,149,7,90,8
+    CONTROL         "Auto ke&ys",IDC_AUTOKEYS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,6,47,10
+    LTEXT           "Key sequence to load replay :",-1,6,25,94,8
+    EDITTEXT        IDC_KEYSEQ,104,23,56,14,ES_AUTOHSCROLL
+    LTEXT           "Default is SEORO*O",-1,166,27,66,8
+    LTEXT           "Keys for old SC replay :",-1,6,44,74,8
+    EDITTEXT        IDC_KEYSEQ2,104,42,56,14,ES_AUTOHSCROLL
+    LTEXT           "Default is SSORO*O",-1,166,46,66,8
+    LTEXT           "Time to wait between keys :",-1,6,63,89,8
+    EDITTEXT        IDC_TIMEWAIT2,104,61,40,14,ES_AUTOHSCROLL
+    LTEXT           "milliseconds (default is 1500)",-1,149,64,90,8
+    LTEXT           "BW 1.16 executable path :",-1,5,81,86,8
+    EDITTEXT        IDC_BWEXE116,103,80,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV16,313,80,18,14
+    LTEXT           "BW 1.15 executable path :",-1,5,100,86,8
+    EDITTEXT        IDC_BWEXE115,103,99,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV15,313,99,18,14
+    LTEXT           "BW 1.14 executable path :",-1,5,119,86,8
+    EDITTEXT        IDC_BWEXE114,103,117,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV14,313,117,18,14
+    LTEXT           "BW 1.13 executable path :",-1,6,137,86,8
+    EDITTEXT        IDC_BWEXE113,104,135,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV13,313,135,18,14
+    LTEXT           "BW 1.12 executable path :",-1,6,156,86,8
+    EDITTEXT        IDC_BWEXE112,104,154,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV12,313,154,18,14
+    LTEXT           "BW 1.11 executable path :",-1,6,175,86,8
+    EDITTEXT        IDC_BWEXE111,104,173,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV11,313,173,18,14
+    LTEXT           "BW 1.10 executable path :",-1,6,195,86,8
+    EDITTEXT        IDC_INSTALLPATH,104,192,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIR,313,192,18,14
+    LTEXT           "BW 1.09 executable path :",-1,6,215,86,8
+    EDITTEXT        IDC_BWEXE109,104,212,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,313,212,18,14
+    GROUPBOX        "Available Keys",-1,348,4,89,81
+    LTEXT           "* for arrow down",-1,355,21,52,8
+    LTEXT           "? for arrow up",-1,355,35,44,8
+    LTEXT           "$ for home",-1,355,49,34,8
+    LTEXT           "= for click on Ok button",-1,355,63,75,8
+    LTEXT           "RWA Player path :",-1,6,235,60,8
+    EDITTEXT        IDC_BWPLAYER,103,232,158,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEPLAYER,264,232,18,14
+    CONTROL         "Auto start",IDC_AUTOSTARTRWA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,235,46,10
+END
+
+IDD_DLGOPTIONS_CHART DIALOGEX 0, 0, 338, 280
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Background grid",IDC_BGGRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,4,68,10
+    CONTROL         "Max APM marker",IDC_MAXAPMMARKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,87,4,70,10
+    CONTROL         "Background gradient",IDC_BGGRADIENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,166,4,82,10
+    CONTROL         "Colored event list",IDC_COLOREDEVENTLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,4,70,10
+    LTEXT           "Bkg image :",IDC_STATIC,4,23,38,8
+    EDITTEXT        IDC_BMPPATH,43,22,187,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEBMP,233,22,20,13
+    CONTROL         "show bkg image",IDC_USEBMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,24,67,10
+    CONTROL         "Center",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,43,43,37,10
+    CONTROL         "Tile",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,86,43,27,10
+    CONTROL         "Stretch",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,124,43,39,10
+    LTEXT           "Position :",IDC_STATIC,4,43,30,8
+    GROUPBOX        "Preview",IDC_PREVIEW,4,61,321,154
+    LTEXT           "Map name : ",IDC_STATIC,10,229,40,8
+    CONTROL         "",IDC_COLOR_MAPNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,55,227,20,12
+    LTEXT           "Player names :",IDC_STATIC,91,229,47,8
+    CONTROL         "",IDC_COLOR_PLAYERNAME,"Static",SS_BLACKRECT | NOT WS_VISIBLE,145,227,20,12
+    GROUPBOX        "Text Colors",IDC_STATIC,4,216,321,30
+    LTEXT           "Other labels :",IDC_STATIC,181,229,42,8
+    CONTROL         "",IDC_COLOR_OTHER,"Static",SS_BLACKRECT | NOT WS_VISIBLE,229,227,20,12
+    PUSHBUTTON      "&Defaults",IDC_DEFAULTS,270,227,50,12
+    GROUPBOX        "Chart Colors",IDC_STATIC,4,249,321,30
+    LTEXT           "&Type :",IDC_STATIC,9,264,21,8
+    COMBOBOX        IDC_COMBOTYPE,33,261,85,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_COLOR_CHART,"Static",SS_BLACKRECT | NOT WS_VISIBLE,128,261,20,12
+    PUSHBUTTON      "&Defaults",IDC_DEFAULTS2,269,261,50,12
+    LTEXT           "Line &size : ",IDC_STATIC,158,264,34,8
+    COMBOBOX        IDC_COMBOLSIZE,193,261,35,46,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BWCHART_DIALOG DIALOGEX 0, 0, 536, 364
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Load...",IDC_GETEVENTS,7,0,34,14
+    PUSHBUTTON      "&Add...",IDC_ADDEVENT,48,0,34,14
+    LTEXT           "C&hart :",IDC_STATIC,92,3,22,8
+    COMBOBOX        IDC_CHARTTYPE,115,0,91,97,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "A&ll players on same chart",IDC_SINGLECHART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,19,94,10
+    LTEXT           "&Zoom :",IDC_STATIC,218,3,23,8
+    COMBOBOX        IDC_ZOOM,244,0,32,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "M&inerals",IDC_MINERALS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,0,42,10
+    CONTROL         "&Gas",IDC_GAZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,11,29,10
+    CONTROL         "&Supply",IDC_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,22,37,10
+    CONTROL         "Macro",IDC_SPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,288,33,36,10
+    CONTROL         "&Units",IDC_UNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,0,32,10
+    CONTROL         "&Hot points",IDC_HOTPOINTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,11,48,10
+    CONTROL         "&Build rate",IDC_BPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,22,45,10
+    CONTROL         "&Train rate",IDC_UPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,33,46,10
+    CONTROL         "Seco&nds",IDC_USESECONDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,0,44,10
+    CONTROL         "A&ctions",IDC_ACTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,11,39,10
+    CONTROL         "&Percentage",IDC_PERCENTAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,22,53,10
+    CONTROL         "Units on B&O",IDC_UNITSONBO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,383,33,54,10
+    CONTROL         "Hot Key selection",IDC_HKSELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,0,71,10
+    CONTROL         "Sort distribution",IDC_SORTDIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,440,11,64,10
+    PUSHBUTTON      "Sho&w Map",IDC_SEEMAP,403,225,41,11,WS_DISABLED
+    PUSHBUTTON      "&Animate",IDC_ANIMATE,445,225,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,479,226,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,492,225,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,506,226,13,10,WS_DISABLED
+    CONTROL         "List1",IDC_LISTEVENTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,258,354,86
+    PUSHBUTTON      "&Help",IDC_DHELP,366,310,34,11
+    SCROLLBAR       IDC_SCROLLBAR1,7,225,332,11
+    LTEXT           "Double click player name to enable/disable chart and events",IDC_DBLCLICK,370,350,192,8
+    PUSHBUTTON      "Test replay loading",IDC_TESTREPLAYS,521,4,73,9,NOT WS_VISIBLE
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,521,14,49,11
+    SCROLLBAR       IDC_SCROLLBAR2,518,25,10,201,SBS_VERT | WS_DISABLED
+    LTEXT           "Duration 00:00:00",IDC_GAMEDURATION,7,20,104,8
+    LTEXT           "00:00:00",IDC_EXACTTIME,355,226,33,8
+    LTEXT           "",IDC_ANIMSPEED,218,20,20,8
+    CONTROL         "Select",IDC_FLT_SELECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,246,36,10
+    CONTROL         "Build",IDC_FLT_BUILD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,246,31,10
+    CONTROL         "Train",IDC_FLT_TRAIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,246,32,10
+    CONTROL         "Suspicious",IDC_FLT_SUSPECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,246,67,10
+    CONTROL         "Hack",IDC_FLT_HACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,246,48,10
+    CONTROL         "Chat",IDC_FLT_CHAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,299,246,48,10
+    CONTROL         "List1",IDC_PLSTATS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,393,244,135,101
+    CONTROL         "Others",IDC_FLT_OTHERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,246,37,10
+    PUSHBUTTON      "Next",IDC_NEXT_SUSPECT,323,346,38,12
+    CONTROL         "",IDC_SUSPECT_INFO,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,346,313,13
+    CONTROL         "",IDC_REPLAYFILE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,7,34,271,8
+    COMBOBOX        IDC_APMSTYLE,440,29,66,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DLGRENAME_DIALOG DIALOG  0, 0, 320, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename Replays"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Name &format :",IDC_STATIC,7,9,45,8
+    EDITTEXT        IDC_FORMAT,53,7,95,13,ES_AUTOHSCROLL
+    LTEXT           ".rep",IDC_STATIC,154,9,13,8
+    LTEXT           "(limit is 27 characters for the replay filename)",IDC_STATIC,174,10,139,8
+    LTEXT           "&Replace :",IDC_STATIC,7,108,32,8
+    EDITTEXT        IDC_USERDEF1,43,105,35,13,ES_AUTOHSCROLL
+    LTEXT           "with",IDC_STATIC,85,108,14,8
+    EDITTEXT        IDC_REPLACEMENT1,107,105,40,13,ES_AUTOHSCROLL
+    LTEXT           "Use this for user defined replacements",IDC_STATIC,161,107,121,8
+    PUSHBUTTON      "Default Format",IDC_DEFAULT,246,29,58,14
+    CONTROL         "List1",IDC_REPLAYS,"SysListView32",LVS_REPORT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,127,306,123
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,7,259,182,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,259,50,14
+    LTEXT           "- Use %p1 marker for player 1 and %p2 for player 2",IDC_STATIC,8,26,159,8
+    LTEXT           "- Use %t1 marker for race of player 1 and %t2 for race of player 2",IDC_STATIC,8,36,203,8
+    DEFPUSHBUTTON   "Rename",IDC_RENAME,206,259,50,14
+    LTEXT           "- Use %map marker for first letters of map name",IDC_STATIC,8,57,148,8
+    LTEXT           "- Use %apm1 and %apm2 markers for players APM",IDC_STATIC,8,67,159,8
+    LTEXT           "- Use %gmt marker for game type (other than 1v1)",IDC_STATIC,8,77,156,8
+    LTEXT           "- Markers can be omitted",IDC_STATIC,8,87,79,8
+    LTEXT           "- Use %pos1 marker for position of player 1 and %pos2 for position of player 2",IDC_STATIC,8,47,242,8
+END
+
+IDD_EXPORTCOACHDLG_DIALOG DIALOG  0, 0, 268, 246
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export to BWCoach training file"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "Training file description",IDC_STATIC,7,7,254,53
+    LTEXT           "&Author :",IDC_STATIC,14,21,48,8
+    EDITTEXT        IDC_AUTHOR,64,19,80,14,ES_AUTOHSCROLL
+    LTEXT           "&Title :",IDC_STATIC,150,21,24,8
+    EDITTEXT        IDC_TITLE,177,19,78,14,ES_AUTOHSCROLL
+    LTEXT           "&Description :",IDC_STATIC,14,41,48,8
+    EDITTEXT        IDC_DESC,64,39,191,14,ES_AUTOHSCROLL
+    GROUPBOX        "Options",IDC_STATIC,7,61,254,53
+    LTEXT           "&Export BO actions until :",IDC_STATIC,15,75,80,8
+    EDITTEXT        IDC_DURATION,96,72,37,14,ES_AUTOHSCROLL
+    LTEXT           "minutes",IDC_STATIC,138,75,25,8
+    CONTROL         "Include &units training",IDC_EXPORTUNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,93,81,10
+    CONTROL         "Include SCV, Drone, Probe",IDC_EXPORTWORKERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,93,101,10
+    LTEXT           "Double click to enable/disable players to export",IDC_STATIC,7,122,150,8
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,136,254,82
+    DEFPUSHBUTTON   "Export",IDOK,144,225,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,211,225,50,14
+END
+
+IDD_MAIN_OPTIONS DIALOG  0, 0, 425, 252
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,7,411,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUPREPLAY MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Load replay",                ID_F_LOADREPLAY
+        MENUITEM "&Add replay events",          ID__ADDREPLAYEVENTS
+        MENUITEM "&Edit comments...",           ID__EDITCOMMENTS
+        MENUITEM "Add to favorites",            ID__ADDTOFAVORITES
+        MENUITEM "&Update akas...",             ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        POPUP "&Watch replay in BW"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&Auto",                       ID__WATCHREPLAYINBW_AUTO
+        END
+        POPUP "&File"
+        BEGIN
+            MENUITEM "Open director&y",             ID__OPENDIRECTORY
+            MENUITEM "&Move to recycle bin",        ID__FILE_MOVETORECYCLEBIN
+            MENUITEM "Move to &folder...",          ID__MOVETOFOLDER
+            MENUITEM "&Rename..",                   ID__FILE_RENAME
+        END
+    END
+END
+
+IDR_POPUPPLAYER MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Remove player",              ID__REMOVEPLAYER
+        MENUITEM "&Enable/Disable",             ID__ENABLEDISABLE
+    END
+END
+
+IDR_POPUPFAV MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Load replay",                ID_F_LOADREPLAY
+        MENUITEM "&Add replay events",          ID__ADDREPLAYEVENTS
+        MENUITEM "&Edit comments...",           ID__EDITCOMMENTS
+        MENUITEM "&Remove from favorites",      ID__REMOVEFAVORITES
+        MENUITEM "&Update akas...",             ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Watch replay in BW...",      ID__WATCHREPLAYINBW
+    END
+END
+
+IDR_POPPLAYERS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&List replays",               ID_G_LISTREPLAYS
+    END
+END
+
+IDR_POPUPREPLAYMULT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Add to favorites",           ID__ADDTOFAVORITES
+        MENUITEM "&Move to recycle bin",        ID__FILE_MOVETORECYCLEBIN
+        MENUITEM "Move to &folder...",          ID__MOVETOFOLDER
+        MENUITEM "&Rename...",                  ID__FILE_RENAME
+    END
+END
+
+IDR_WATCHREP MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&Watch replay in BW"
+        BEGIN
+            MENUITEM "BW 1.16",                     ID__WATCHREPLAY_BW116
+            MENUITEM "BW 1.15",                     ID__WATCHREPLAY_BW115
+            MENUITEM "BW 1.14",                     ID__WATCHREPLAY_BW114
+            MENUITEM "BW 1.13",                     ID__WATCHREPLAY_BW113
+            MENUITEM "BW 1.12",                     ID__WATCHREPLAY_BW112
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&Auto",                       ID__WATCHREPLAYINBW_AUTO
+        END
+    END
+END
+
+IDR_MENU_EVENTS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&Export to"
+        BEGIN
+            MENUITEM "&Text file",                  ID_FF_EXPORT_TOTEXTFILE
+            MENUITEM "&BWCoach...",                 ID__EXPORTTO_BWCOACH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLGHELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_DLGBWCHART_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DLGBROWSER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGFAVORITES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITCOMMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_DLGAKAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITAKAS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_PROGRESSBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 8
+    END
+
+    IDD_DLGOPTIONS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 342
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLGMAP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DLGFASTAKA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DLGOPTIONS_CHART, DIALOG
+    BEGIN
+        RIGHTMARGIN, 331
+        BOTTOMMARGIN, 279
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLGOPTIONS_CHART DLGINIT
+BEGIN
+    IDC_COMBOTYPE, 0x403, 8, 0
+0x694d, 0x656e, 0x6172, 0x006c, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x6147, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 7, 0
+0x7553, 0x7070, 0x796c, "\000" 
+    IDC_COMBOTYPE, 0x403, 6, 0
+0x6e55, 0x7469, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x5041, 0x004d, 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5042, 0x204d, 0x6228, 0x6975, 0x646c, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5054, 0x204d, 0x7428, 0x6172, 0x6e69, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 13, 0
+0x614d, 0x2070, 0x6f43, 0x6576, 0x6172, 0x6567, "\000" 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0033, 
+    0
+END
+
+IDD_BWCHART_DIALOG DLGINIT
+BEGIN
+    IDC_ZOOM, 0x403, 2, 0
+0x0031, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0032, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0034, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0038, 
+    IDC_ZOOM, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_ZOOM, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_APMSTYLE, 0x403, 10, 0
+0x6556, 0x7972, 0x6620, 0x616c, 0x0074, 
+    IDC_APMSTYLE, 0x403, 5, 0
+0x6c46, 0x7461, "\000" 
+    IDC_APMSTYLE, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_APMSTYLE, 0x403, 8, 0
+0x7944, 0x616e, 0x696d, 0x0063, 
+    IDC_APMSTYLE, 0x403, 13, 0
+0x6556, 0x7972, 0x4420, 0x6e79, 0x6d61, 0x6369, "\000" 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\bwchart.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOXMENU        "&About bwchart..."
+    IDS_DELETEAKAS          "Do you really want to delete all akas for <%s> ?"
+    IDS_EMPTYDB             "Your replay database is empty.\r\nDo you want load the replays found in '%s' ?\r\n\r\n(click Cancel if you don't want to be asked again)"
+    IDS_ONEREPLAYADDED      "%d replay was added to the database."
+    IDS_MULREPLAYADDED      "%d replays were added to the database."
+    IDS_CORRUPTED           "The following %d replays seem to be corrupted:\r\n"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MOREREPLAYS         "\r\n\r\nDo you want to move those replays to a special folder so bwchart ignores them?"
+    IDS_REMOVEREP           "<%s> does not exist any more.\r\nDo you want to remove it from the database?"
+    IDS_EMPTYBWPATH         "BW path to executable is empty. Check the 'options' section."
+    IDS_CANTSTARTBW         "Unable to start BW. Check the 'options' section."
+    IDS_NOBWWINDOW          "Unable to locate BW window (it might have taken too much time to start)"
+    IDS_CANTCOPY            "Unable to copy replay file to the bwchart directory."
+    IDS_REMOVEDMISSING      "%d missing replays were removed from database"
+    IDS_AKAEXIST            "There is already an aka definition for that player name"
+    IDS_REFRESHBROWSER      "The %s list is empty. Do you want to refresh the replay browser now?"
+    IDS_PLAYERS             "players"
+    IDS_MAPS                "maps"
+    IDS_MOVEREP             "Do you want to move the existing replay database to that new location?"
+    IDS_CORRUPTEDBIS        "<%s> seems to be corrupted"
+    IDS_CANTLOAD            "Cant load %s"
+    IDS_CANTCREATFILE       "Can't create file"
+    IDS_CORRUPTED3          "<%s>\r\nseems to be corrupted. Please remove it from the database directory"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DELETEALL           "Do you really want to delete the replay database file (replays.txt) ?"
+    IDS_FORMATCHG           "The replay database format has changed.\r\n\r\nYou will need to rebuild the database by clicking the 'Refresh' button\r\non the Replay Browser window. The favorites list will also be lost.\r\n\r\nThe new format will now allow new upgrades without rebuilding the database.\r\n\r\nSorry for the inconvenience."
+    IDS_SUSPICIOUS          "Suspicious (%d)"
+    IDS_COL_TIME            "Time"
+    IDS_COL_PLAYER          "Player"
+    IDS_COL_ACTION          "Action"
+    IDS_COL_PARAMETERS      "Parameters"
+    IDS_COL_UNITSID         "Units ID"
+    IDS_COL_ACTIONS         "Actions"
+    IDS_COL_APM             "APM"
+    IDS_COL_NULL            "Null"
+    IDS_COL_VAPM            "VAPM"
+    IDS_COL_MINERAL         "Mineral"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAS             "Gas"
+    IDS_COL_SUPPLY          "Supply"
+    IDS_COL_UNITS           "Units"
+    IDS_COL_APMPM           "APM+/-"
+    IDS_COL_APMMAX          "APM Max"
+    IDS_COL_APMMIN          "APM Min"
+    IDS_COL_BASE            "Base"
+    IDS_COL_REPLAYNAME      "Replay name"
+    IDS_COL_PLAYER1         "Player 1"
+    IDS_COL_APM1            "APM 1"
+    IDS_COL_PLAYER2         "Player 2"
+    IDS_COL_APM2            "APM 2"
+    IDS_COL_MAP             "Map"
+    IDS_COL_DURATION        "Duration"
+    IDS_COL_TYPE            "Type"
+    IDS_COL_RWAAUTHOR       "RWA Author"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_GAMEDATE        "Game Date"
+    IDS_COL_ENGINE          "Engine"
+    IDS_COL_COMMENT         "Comment"
+    IDS_COL_DIRECTORY       "Directory"
+    IDS_COL_FILEDATE        "File Date"
+    IDS_COL_POS1            "Pos 1"
+    IDS_COL_POS2            "Pos 2"
+    IDS_COL_PLAYERNAME      "Player name"
+    IDS_COL_AVGAPM          "Avg APM"
+    IDS_COL_PERCDEV         "% dev"
+    IDS_COL_GAMESPLAYED     "Games played"
+    IDS_COL_ZERGPERC        "Zerg%"
+    IDS_COL_RANPERC         "Ran%"
+    IDS_COL_TOSSPERC        "Toss%"
+    IDS_COL_MAPNAME         "Map name"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNITS               "units"
+    IDS_CT_RESOURCES        "Resources"
+    IDS_CT_UNITDIST         "Unit distribution"
+    IDS_CT_ACTIONDIST       "Action distribution"
+    IDS_CT_BUILDDIST        "Buildings distribution"
+    IDS_CT_UPGRADES         "Upgrades"
+    IDS_CT_APMDIST          "APM distribution"
+    IDS_CT_BO               "Build Order"
+    IDS_CT_HOTKEYS          "Hot Keys"
+    IDS_CT_APM              "APM"
+    IDS_COL_MICRO           "Micro"
+    IDS_COL_MACRO           "Macro"
+    IDS_COL_AVGAPMAST       "Avg APM T"
+    IDS_COL_AVGAPMASZ       "Avg APM Z"
+    IDS_COL_AVGAPMASP       "Avg APM P"
+    IDS_MINIMAPPING         "Ping"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_AVGGAMEDURATION "Avg Game Duration"
+    IDS_WATCHREPLAY         "Watch Replay"
+    IDS_CHARTS              "Charts"
+    IDS_OTHEROPTIONS        "Other options"
+    IDS_MKDURATION          "Duration: %s@%s"
+    IDS_DROP                "Drop"
+    IDS_EXPAND              "Expand"
+    IDS_LEAVE               "Leave"
+    IDS_MINGAS              "Min && Gas"
+    IDS_SUPPLYUNIT          "Supply && Unit"
+    IDS_AUDIOCOMMENT        " (audio commentary by %s)"
+    IDS_TOTAL               "[Total = %d]"
+    IDS_ANIMATE             "&Animate"
+    IDS_STOP                "&Stop"
+    IDS_BUILDS              "builds"
+    IDS_MOVES               "moves"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COL_BOCOUNT         "Count"
+    IDS_COL_BOCONTENT       "Build order"
+    IDS_COL_BOPERCENT       "%"
+    IDS_BUILDBOFILE         "This new version computes statistics on build orders. To activate this feature on replays that are already in the database, you need to re-process them.\r\n\r\nDo you want to analyse the build order of all your replays now?"
+    IDS_HACK                "Hack (%d)"
+    IDS_HACKCOUNT           "Hacks"
+    IDS_CT_MIX_APMHOTKEYS   "APM+Hot Keys"
+    IDS_CT_MAPCOVERGAGE     "Map Coverage"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\bwchart.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

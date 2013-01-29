@@ -1,0 +1,24 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=bwchart.chm
+Contents file=bwchart.hhc
+Default Window=DEFAULT
+Default topic=UserGuide\toc.htm
+Display compile progress=Yes
+Full-text search=Yes
+Index file=bwchart.hhk
+Language=0x409 English (United States)
+Title=bwchart Help
+
+[WINDOWS]
+DEFAULT="bwchart Help","bwchart.hhc","bwchart.hhk","UserGuide\toc.htm","UserGuide\toc.htm","UserGuide\toc.htm",,"UserGuide\toc.htm",,0x40420,150,0x387e,[10,10,710,510],0x40000,,,,,,0
+
+
+[FILES]
+html\background.gif
+UserGuide\toc.htm
+html\bwchart_ie4.css
+
+[INFOTYPES]
+

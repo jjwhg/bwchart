@@ -1,0 +1,8 @@
+    IDS_CT_RESOURCES        "Resources"
+    IDS_CT_UNITDIST         "Unit distribution"
+    IDS_CT_ACTIONDIST       "Action distribution"
+    IDS_CT_BUILDDIST        "Buildings distribution"
+    IDS_CT_UPGRADES         "Upgrades"
+    IDS_CT_APMDIST          "APM distribution"
+    IDS_CT_BO               "Build Order"
+    IDS_CT_HOTKEYS          "Hot Keys"

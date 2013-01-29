@@ -1,0 +1,63 @@
+BODY
+{
+    SCROLLBAR-FACE-COLOR: #9B9556;
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial;
+    SCROLLBAR-HIGHLIGHT-COLOR: #9CA566;
+    SCROLLBAR-SHADOW-COLOR: #ffffff;
+    SCROLLBAR-ARROW-COLOR: #ffffff;
+    SCROLLBAR-TRACK-COLOR: #f0f0f0;
+    FONT-FAMILY: Verdana, Arial;
+    SCROLLBAR-DARKSHADOW-COLOR: #8B8546;
+    SCROLLBAR-BASE-COLOR: #ffffff;
+    scrollbar-3d-light-color: #ffffff;
+    BACKGROUND: URL(background.gif)
+}
+H2
+{
+    COLOR: #4A471E;
+    FONT-FAMILY: verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 34
+}
+
+P
+{
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial;
+}
+CODE
+{
+    BACKGROUND-COLOR: #e6e6e6;
+    FONT: 100% "Courier New", Courier, mono;
+    WIDTH: 100%
+}
+TD
+{
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial;
+}
+A:link
+{
+    COLOR: #9B9556;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: #9B9556;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: #9B9556;
+    TEXT-DECORATION: underline
+}
+
+.TITLE
+{
+    COLOR: #000000;
+	BACKGROUND-COLOR: #FAF79E;
+    FONT-FAMILY: verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 24;
+	TEXT-ALIGN: center;
+}

@@ -1,0 +1,915 @@
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGHELP_DIALOG DIALOG DISCARDABLE  0, 0, 327, 239
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "帮助"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,138,218,50,14
+    LTEXT           "指令",IDC_STATIC,7,7,24,8
+    LTEXT           "一次指令就是指一次键盘的操作或鼠标的点击。游戏中的其他事件将不会被记录在录象文件中。同时，只有对单位，建筑或资源的指令才会被记录下来。",
+                    IDC_STATIC,58,7,262,30
+    LTEXT           "APM",IDC_STATIC,7,41,16,8
+    LTEXT           "Action Per Minute. 是整个游戏过程中的平均值：指令总数/游戏时间。游戏的前1分20秒是不计的。",
+                    IDC_STATIC,58,41,262,18
+    LTEXT           "空指令",IDC_STATIC,7,100,13,8
+    LTEXT           "没有产生预期效果的指令被称为空指令。例如，没有足够资源的时候试图建造单位。",
+                    IDC_STATIC,58,100,262,28
+    LTEXT           "VAPM",IDC_STATIC,7,154,21,8
+    LTEXT           "有效APM。（指令总数-空指令）/游戏时间。",IDC_STATIC,58,
+                    154,262,22
+    LTEXT           "操作比率",IDC_STATIC,7,185,40,8
+    LTEXT           "操作比率显示在头两个选手的旁边，操作比率即选手A的指令数/选手B的指令数。",
+                    IDC_STATIC,58,185,262,22
+    LTEXT           "空指令在列表里被标记星号。",IDC_STATIC,58,129,204,10
+    LTEXT           "APM+/-",IDC_STATIC,7,68,26,8
+    LTEXT           "APM方差，测量APM的稳定度，如果它等于0，说明你的APM是个恒定值，如果它很大，说明你的APM随着游戏的进程变化很大。",
+                    IDC_STATIC,58,68,262,25
+END
+
+IDD_DLGBWCHART_DIALOG DIALOG DISCARDABLE  0, 0, 524, 302
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "图表",IDC_MENU_CHARTS,7,5,65,14
+    PUSHBUTTON      "录象浏览器",IDC_MENU_BROWSER,77,5,65,14
+    PUSHBUTTON      "收藏",IDC_MENU_FAVORITES,147,5,65,14
+    PUSHBUTTON      "著名选手",IDC_MENU_AKAS,217,5,65,14
+    PUSHBUTTON      "选项",IDC_MENU_OPTIONS,287,5,65,14
+END
+
+IDD_DLGBROWSER_DIALOG DIALOG DISCARDABLE  0, 0, 480, 265
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "录象 &目录 :",IDC_STATIC,7,2,56,8
+    EDITTEXT        IDC_DIR,67,0,156,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,223,0,19,12
+    PUSHBUTTON      "&(R)刷新",IDC_REFRESH,247,0,62,14
+    CONTROL         "搜索 &(F)子文件夹",IDC_RECURSIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,317,3,75,10
+    LTEXT           "游戏分类:",IDC_STATIC,7,19,35,8
+    CONTROL         "T",IDC_MUTERRAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    67,19,21,10
+    CONTROL         "Z",IDC_MUZERG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,88,
+                    19,21,10
+    CONTROL         "P",IDC_MUTOSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,
+                    19,21,10
+    CONTROL         "XvX",IDC_MUXVX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    132,19,29,10
+    CONTROL         "只选RWA",IDC_RWAONLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,162,19,48,10
+    PUSHBUTTON      "&添加录象...",IDC_ADDREPLAY,247,17,62,14
+    PUSHBUTTON      "&清除",IDC_CLEANMISSING,317,17,72,14
+    LTEXT           "选手 &过滤器 :",IDC_STATIC,7,37,41,8
+    EDITTEXT        IDC_FPLAYER,67,35,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    129,37,12,8
+    LTEXT           "0",IDC_REPLAYCOUNT,145,37,203,8
+    LTEXT           "初始位置滤镜 :",IDC_STATIC,7,55,46,8
+    EDITTEXT        IDC_FPOSITIONS,67,52,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_POSFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    129,55,12,8
+    LTEXT           "输入两个起始位置，用逗号隔开 (例如: 12/3, 9/6)",
+                    IDC_STATIC,145,54,196,8
+    LTEXT           "地图滤镜:",IDC_STATIC,7,72,36,8
+    EDITTEXT        IDC_FMAP,67,70,60,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAPFILTERON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    129,72,12,8
+    LTEXT           "多张地图用逗号隔开 (例如: temple, hunters)",IDC_STATIC,
+                    145,72,206,8
+    CONTROL         "列表1",IDC_LISTMAPS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | NOT WS_VISIBLE | 
+                    WS_BORDER | WS_TABSTOP,57,89,81,61
+    CONTROL         "列表1",IDC_REPS,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_OWNERDATA | WS_BORDER | 
+                    WS_TABSTOP,144,90,112,95
+    CONTROL         "列表1",IDC_LISTPLAYERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | NOT 
+                    WS_VISIBLE | WS_BORDER | WS_TABSTOP,267,90,67,81
+    LTEXT           "评论 :",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "&编辑...",IDC_EDITCOMMENT,444,246,29,12
+    LTEXT           "显示 :",IDC_STATIC,62,199,28,8,NOT WS_VISIBLE
+    CONTROL         "录象&",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_GROUP,122,199,38,10
+    CONTROL         "&选手",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,169,199,38,10
+    CONTROL         "&地图",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,216,199,33,10
+    CONTROL         "进程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | 
+                    WS_BORDER,67,17,175,14
+    LTEXT           "0",IDC_PLAYERCOUNT,122,214,65,8,NOT WS_VISIBLE
+    LTEXT           "0",IDC_MAPCOUNT,196,214,65,8,NOT WS_VISIBLE
+    CONTROL         "启动时加载",IDC_AUTOREFRESH,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,63,156,63,10
+    CONTROL         "Tab1",IDC_VTAB,"SysTabControl32",TCS_VERTICAL,7,90,14,
+                    147
+END
+
+IDD_DLGFAVORITES DIALOG DISCARDABLE  0, 0, 480, 265
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "列表1",IDC_REPS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,20,407,203
+    LTEXT           "0",IDC_REPLAYCOUNT,7,7,65,8
+    LTEXT           "评论:",IDC_COMMENT1,7,250,34,8
+    EDITTEXT        IDC_COMMENT,49,246,391,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "&编辑...",IDC_EDITCOMMENT,413,233,29,12
+END
+
+IDD_DLGEDITCOMMENT_DIALOG DIALOG DISCARDABLE  0, 0, 320, 84
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑评论"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,306,53,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,203,66,50,14
+    PUSHBUTTON      "取消",IDCANCEL,263,66,50,14
+    LTEXT           "评论字数限定在256以内",IDC_STATIC,7,68,124,8
+END
+
+IDD_DLGAKAS DIALOG DISCARDABLE  0, 0, 480, 265
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手",IDC_STATIC,7,7,24,8
+    COMBOBOX        IDC_PLAYERS,7,17,103,99,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&新建...",IDC_ADDPLAYER,115,17,29,13
+    PUSHBUTTON      "&删除",IDC_DELPLAYER,150,17,29,13
+    LTEXT           "知名选手别称",IDC_STATIC,7,36,17,8
+    LISTBOX         IDC_AKAPLAYERS,7,48,171,189,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&编辑选手别称...",IDC_ADDAKAPLAYER,7,244,172,14
+    LTEXT           "地图",IDC_STATIC,221,7,18,8
+    COMBOBOX        IDC_MAPS,221,17,103,127,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&新建...",IDC_ADDMAP,329,17,29,13
+    PUSHBUTTON      "&删除",IDC_DELMAP,364,17,29,13
+    LTEXT           "别称",IDC_STATIC,221,36,17,8
+    LISTBOX         IDC_AKAMAPS,221,48,171,189,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&编辑地图别称...",IDC_ADDAKAMAP,221,244,171,14
+END
+
+IDD_DLGEDITAKAS_DIALOG DIALOG DISCARDABLE  0, 0, 320, 234
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑别称"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手主要ID",IDC_PLAYERNAME,7,9,56,8
+    EDITTEXT        IDC_MAINNAME,7,21,96,14,ES_AUTOHSCROLL
+    LTEXT           "别称（每行一个）",IDC_STATIC,7,41,60,8
+    EDITTEXT        IDC_AKAS,7,54,158,140,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "建议",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    184,20,55,10
+    CONTROL         "所有ID",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,244,20,
+                    46,10
+    LTEXT           "&搜索 :",IDC_STATIC,187,39,38,8
+    EDITTEXT        IDC_SEARCHFOR,228,36,85,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_SUGGESTIONS,182,54,131,120,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "<< 添加名字到别称",IDC_ADDAKA,182,180,131,14
+    DEFPUSHBUTTON   "确定",IDOK,205,213,50,14
+    PUSHBUTTON      "取消",IDCANCEL,263,213,50,14
+    GROUPBOX        "",IDC_STATIC,-7,199,341,40
+END
+
+IDD_PROGRESSBAR DIALOG DISCARDABLE  0, 0, 186, 15
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "正在加载请等待..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "进程1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,0,0,
+                    185,14
+END
+
+IDD_DLGOPTIONS DIALOG DISCARDABLE  0, 0, 349, 237
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "录象库",IDC_STATIC,0,2,338,90
+    CONTROL         "保存到 ""My documents""",IDC_RADIOSAVE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,15,95,10
+    CONTROL         "保存到bwchart",IDC_RADIOSAVE2,"Button",
+                    BS_AUTORADIOBUTTON,105,15,97,10
+    PUSHBUTTON      "清除 (replays.txt)",IDC_CLEAR,223,13,91,14
+    CONTROL         "&把bwchart.exe关联到*.rep文件",IDC_FILEASSO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,31,194,10
+    CONTROL         "自动添加并显示最近的游戏的录象",IDC_AUTOADD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,46,241,10
+    CONTROL         "启动时加载最新的录象",IDC_AUTOLOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,61,97,10
+    CONTROL         "启动时导入录象库 (或按刷新导入录象 )",IDC_AUTOLOADDB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,76,267,10
+    GROUPBOX        "可疑事件",IDC_STATIC,0,97,338,27
+    LTEXT           "忽略以后事件 :",IDC_STATIC,7,109,64,8
+    EDITTEXT        IDC_SUSPECT_LIMIT,75,107,27,13,ES_AUTOHSCROLL
+    LTEXT           "分钟 (重新加载)",IDC_STATIC,107,109,106,8
+    GROUPBOX        "自动检测升级",IDC_STATIC,0,130,215,38
+    PUSHBUTTON      "自动检测升级&",IDC_CHECKUPDATE,6,146,98,14
+    CONTROL         "启动时自动检测",IDC_AUTOCHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,116,147,84,10
+END
+
+IDD_DLGMAP_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "地图"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "建筑",IDC_BUILDON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,184,43,10
+    PUSHBUTTON      "&动态地图",IDC_ANIMATE,93,183,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,127,183,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,140,183,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,154,183,13,10,WS_DISABLED
+    CONTROL         "资源",IDC_MINERALON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,184,43,10
+END
+
+IDD_DLGFASTAKA_DIALOG DIALOG DISCARDABLE  0, 0, 319, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "更新别称"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "选手 1 :",IDC_STATIC,7,9,30,8
+    EDITTEXT        IDC_PLAYER1,47,7,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO1,139,7,64,13
+    COMBOBOX        IDC_LISTPLAYERS1,215,7,97,70,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "选手 2 :",IDC_STATIC,7,28,30,8
+    EDITTEXT        IDC_PLAYER2,47,25,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO2,139,25,64,13
+    COMBOBOX        IDC_LISTPLAYERS2,215,25,97,70,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "地图 :",IDC_STATIC,7,47,19,8
+    EDITTEXT        IDC_MAP,47,44,80,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "是...的别称 >>",IDC_ASSO3,139,44,64,13
+    COMBOBOX        IDC_LISTMAPS,215,44,97,70,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "关闭",IDCANCEL,262,76,50,14
+    GROUPBOX        "",IDC_STATIC,-9,64,339,40
+    LTEXT           "已经是...的别称",IDC_TEXT1,139,10,64,8,NOT WS_VISIBLE
+    LTEXT           "已经是...的别称",IDC_TEXT2,139,27,64,8,NOT WS_VISIBLE
+    LTEXT           "已经是...的别称",IDC_TEXT3,139,47,64,8,NOT WS_VISIBLE
+END
+
+IDD_DLGOPTIONS1 DIALOG DISCARDABLE  0, 0, 445, 231
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "星际开始前等待时间:",-1,2,2,92,8
+    EDITTEXT        IDC_TIMEWAIT,100,0,40,14,ES_AUTOHSCROLL
+    LTEXT           "毫秒 (default is 3000)",-1,145,3,90,8
+    CONTROL         "&自动按键",IDC_AUTOKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,263,2,47,10
+    LTEXT           "加载录象按键顺序:",-1,2,21,94,8
+    EDITTEXT        IDC_KEYSEQ,100,19,56,14,ES_AUTOHSCROLL
+    LTEXT           "默认值SEORO*O",-1,162,23,66,8
+    LTEXT           "旧录象按键 :",-1,2,40,74,8
+    EDITTEXT        IDC_KEYSEQ2,100,38,56,14,ES_AUTOHSCROLL
+    LTEXT           "默认值 SSORO*O",-1,162,42,66,8
+    LTEXT           "按键之间等待时间 :",-1,2,59,89,8
+    EDITTEXT        IDC_TIMEWAIT2,100,57,40,14,ES_AUTOHSCROLL
+    LTEXT           "毫秒 (default is 1500)",-1,145,60,90,8
+    LTEXT           "星际1.11b版路径:",-1,2,79,86,8
+    EDITTEXT        IDC_BWEXE111,100,77,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIRV11,309,77,18,14
+    LTEXT           "星际1.10版路径:",-1,2,99,86,8
+    EDITTEXT        IDC_INSTALLPATH,100,96,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEDIR,309,96,18,14
+    LTEXT           "星际1.09版路径:",-1,2,119,86,8
+    EDITTEXT        IDC_BWEXE109,100,116,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,309,116,18,14
+    GROUPBOX        "按键功能",-1,344,0,89,81
+    LTEXT           "* 向下卷屏",-1,351,17,52,8
+    LTEXT           "? 向上卷屏",-1,351,31,44,8
+    LTEXT           "$ 返回初始点",-1,351,45,34,8
+    LTEXT           "= 按确认键",-1,351,59,75,8
+    LTEXT           "RWA播放器路径:",-1,2,139,60,8
+    EDITTEXT        IDC_BWPLAYER,99,136,158,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEPLAYER,260,136,18,14
+    CONTROL         "自动开始",IDC_AUTOSTARTRWA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,284,139,46,10
+END
+
+IDD_DLGOPTIONS_CHART DIALOG DISCARDABLE  0, 0, 338, 279
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "背景坐标方格",IDC_BGGRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,1,0,68,10
+    CONTROL         "最大APM值操作者",IDC_MAXAPMMARKER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,83,0,70,10
+    CONTROL         "背景倾斜度",IDC_BGGRADIENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,162,0,82,10
+    CONTROL         "标注颜色的事件列表",IDC_COLOREDEVENTLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,254,0,70,10
+    LTEXT           "背景图象 :",IDC_STATIC,0,19,38,8
+    EDITTEXT        IDC_BMPPATH,39,18,187,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSEBMP,229,18,20,13
+    CONTROL         "显示背景图象",IDC_USEBMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,254,20,67,10
+    CONTROL         "中心",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    39,39,37,10
+    CONTROL         "平铺",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,82,39,27,
+                    10
+    CONTROL         "拉伸",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,120,39,39,
+                    10
+    LTEXT           "位置 :",IDC_STATIC,0,39,30,8
+    GROUPBOX        "预览",IDC_PREVIEW,0,57,321,154
+    LTEXT           "地图名称 : ",IDC_STATIC,6,225,40,8
+    CONTROL         "",IDC_COLOR_MAPNAME,"",NOT WS_VISIBLE | 0x4,51,223,20,
+                    12
+    LTEXT           "选手名字 :",IDC_STATIC,87,225,47,8
+    CONTROL         "",IDC_COLOR_PLAYERNAME,"",NOT WS_VISIBLE | 0x4,141,223,
+                    20,12
+    GROUPBOX        "文本颜色",IDC_STATIC,0,212,321,30
+    LTEXT           "其他标签 :",IDC_STATIC,177,225,42,8
+    CONTROL         "",IDC_COLOR_OTHER,"",NOT WS_VISIBLE | 0x4,225,223,20,12
+    PUSHBUTTON      "&默认项",IDC_DEFAULTS,266,223,50,12
+    GROUPBOX        "图表颜色",IDC_STATIC,0,245,321,30
+    LTEXT           "&种类 :",IDC_STATIC,5,260,21,8
+    COMBOBOX        IDC_COMBOTYPE,29,257,85,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_COLOR_CHART,"Static",SS_BLACKRECT | NOT 
+                    WS_VISIBLE,124,257,20,12
+    PUSHBUTTON      "&默认项",IDC_DEFAULTS2,265,257,50,12
+    LTEXT           "行距 &大小 : ",IDC_STATIC,154,260,34,8
+    COMBOBOX        IDC_COMBOLSIZE,189,257,35,46,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BWCHART_DIALOG DIALOGEX 0, 0, 536, 364
+STYLE WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "&打开...",IDC_GETEVENTS,7,0,34,14
+    PUSHBUTTON      "&加载...",IDC_ADDEVENT,48,0,34,14
+    LTEXT           "图&表 :",IDC_STATIC,92,3,22,8
+    COMBOBOX        IDC_CHARTTYPE,115,0,91,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "所&有选手显示在同一个图表上",IDC_SINGLECHART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,19,94,10
+    LTEXT           "&放大 :",IDC_STATIC,218,3,23,8
+    COMBOBOX        IDC_ZOOM,244,0,32,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "资&源",IDC_MINERALS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,288,0,42,10
+    CONTROL         "&气体",IDC_GAZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    288,11,29,10
+    CONTROL         "&人口",IDC_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    288,22,37,10
+    CONTROL         "AP&M",IDC_SPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    288,33,31,10
+    CONTROL         "&单位",IDC_UNITS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    335,0,32,10
+    CONTROL         "&转折点",IDC_HOTPOINTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,335,11,48,10
+    CONTROL         "&建筑比例",IDC_BPM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,335,22,45,10
+    CONTROL         "&建造单位比例",IDC_UPM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,335,33,46,10
+    CONTROL         "秒&钟",IDC_USESECONDS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,383,0,44,10
+    CONTROL         "操&作",IDC_ACTIONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,383,11,39,10
+    CONTROL         "&百分比",IDC_PERCENTAGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,383,22,53,10
+    CONTROL         "在建筑&顺序上的单位",IDC_UNITSONBO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,383,33,54,10
+    CONTROL         "热键选择",IDC_HKSELECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,440,0,71,10
+    CONTROL         "不同操作分配比",IDC_SORTDIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,440,11,64,10
+    PUSHBUTTON      "显示&地图",IDC_SEEMAP,403,225,41,11,WS_DISABLED
+    PUSHBUTTON      "&动画演示",IDC_ANIMATE,445,225,33,11
+    PUSHBUTTON      "+",IDC_SPEEDPLUS,479,226,13,10,WS_DISABLED
+    PUSHBUTTON      "-",IDC_SPEEDMINUS,492,225,13,10,WS_DISABLED
+    PUSHBUTTON      "=",IDC_PAUSE,506,226,13,10,WS_DISABLED
+    CONTROL         "列表1",IDC_LISTEVENTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDATA | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,258,354,86
+    CONTROL         "列表1",IDC_PLSTATS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,393,244,135,
+                    101
+    PUSHBUTTON      "&帮助",IDC_DHELP,366,310,34,11
+    SCROLLBAR       IDC_SCROLLBAR1,7,225,332,11
+    LTEXT           "双击选手名字显示/屏蔽图表和事件列表",IDC_DBLCLICK,370,
+                    350,192,8
+    PUSHBUTTON      "测试录象载入",IDC_TESTREPLAYS,521,4,73,9,NOT WS_VISIBLE
+    CONTROL         "过程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | 
+                    WS_BORDER,521,14,49,11
+    SCROLLBAR       IDC_SCROLLBAR2,518,25,10,201,SBS_VERT | WS_DISABLED
+    LTEXT           "持续时间 00:00:00",IDC_GAMEDURATION,7,20,104,8
+    LTEXT           "00:00:00",IDC_EXACTTIME,355,226,33,8
+    LTEXT           "",IDC_ANIMSPEED,218,20,20,8
+    CONTROL         "选择",IDC_FLT_SELECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,246,36,10
+    CONTROL         "建筑",IDC_FLT_BUILD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,246,31,10
+    CONTROL         "建造",IDC_FLT_TRAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,90,246,32,10
+    CONTROL         "可疑操作",IDC_FLT_SUSPECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,176,246,70,10
+    CONTROL         "其他",IDC_FLT_OTHERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,246,37,10
+    PUSHBUTTON      "下一个",IDC_NEXT_SUSPECT,323,346,38,12
+    CONTROL         "",IDC_SUSPECT_INFO,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,346,313,13
+    CONTROL         "",IDC_REPLAYFILE,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,
+                    7,34,271,8
+    COMBOBOX        IDC_APMSTYLE,440,29,66,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_DLGRENAME_DIALOG DIALOG DISCARDABLE  0, 0, 320, 279
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "重命名录象"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "名称 &格式 :",IDC_STATIC,7,9,45,8
+    EDITTEXT        IDC_FORMAT,53,7,95,13,ES_AUTOHSCROLL
+    LTEXT           ".rep",IDC_STATIC,154,9,13,8
+    LTEXT           "(录象文件名最长只能包含27个英文字符)",IDC_STATIC,174,10,
+                    139,8
+    LTEXT           "&替换 :",IDC_STATIC,7,108,32,8
+    EDITTEXT        IDC_USERDEF1,43,105,35,13,ES_AUTOHSCROLL
+    LTEXT           "使用",IDC_STATIC,85,108,14,8
+    EDITTEXT        IDC_REPLACEMENT1,107,105,40,13,ES_AUTOHSCROLL
+    LTEXT           "用此限定替换录象",IDC_STATIC,161,107,121,8
+    PUSHBUTTON      "默认模式",IDC_DEFAULT,246,29,58,14
+    CONTROL         "列表1",IDC_REPLAYS,"SysListView32",LVS_REPORT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,127,306,123
+    CONTROL         "过程1",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | 
+                    WS_BORDER,7,259,182,14
+    PUSHBUTTON      "取消",IDCANCEL,263,259,50,14
+    LTEXT           "- 使用 %p1 标记代表一个选手,而 %p2 代表另一个选手",
+                    IDC_STATIC,8,26,159,8
+    LTEXT           "- 使用 %t1 标记代表一个选手,而 %t2 代表另一个选手",
+                    IDC_STATIC,8,36,203,8
+    DEFPUSHBUTTON   "重命名",IDC_RENAME,206,259,50,14
+    LTEXT           "- 使用 %map 标记代表地图名字的首字母",IDC_STATIC,8,57,
+                    148,8
+    LTEXT           "- 使用 %apm1 和 %apm2 标记代表不同选手的APM值",
+                    IDC_STATIC,8,67,159,8
+    LTEXT           "- 使用 %gmt 标记代表游戏模式 (除了1v1模式)",IDC_STATIC,
+                    8,77,156,8
+    LTEXT           "- 标记可以被略去",IDC_STATIC,8,87,79,8
+    LTEXT           "- 使用 %pos1 标记代表一个选手的起始位置,而 %pos2 代表另个选手的",
+                    IDC_STATIC,8,47,242,8
+END
+
+IDD_EXPORTCOACHDLG_DIALOG DIALOG DISCARDABLE  0, 0, 268, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导出BW Coach的训练文件"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "训练文件描述",IDC_STATIC,7,7,254,53
+    LTEXT           "&作者 :",IDC_STATIC,14,21,48,8
+    EDITTEXT        IDC_AUTHOR,64,19,80,14,ES_AUTOHSCROLL
+    LTEXT           "&名称 :",IDC_STATIC,150,21,24,8
+    EDITTEXT        IDC_TITLE,177,19,78,14,ES_AUTOHSCROLL
+    LTEXT           "&描述 :",IDC_STATIC,14,41,48,8
+    EDITTEXT        IDC_DESC,64,39,191,14,ES_AUTOHSCROLL
+    GROUPBOX        "选项",IDC_STATIC,7,61,254,53
+    LTEXT           "&导出建筑顺序直到(时间) :",IDC_STATIC,15,75,80,8
+    EDITTEXT        IDC_DURATION,96,72,37,14,ES_AUTOHSCROLL
+    LTEXT           "分钟",IDC_STATIC,138,75,25,8
+    CONTROL         "包括 &单位的建造",IDC_EXPORTUNITS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,93,81,10
+    CONTROL         "包括人族SCV,虫族农民,神族工兵",IDC_EXPORTWORKERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,93,101,10
+    LTEXT           "双击显示或屏蔽特定选手的操作输出",IDC_STATIC,7,122,150,
+                    8
+    CONTROL         "列表1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,136,254,82
+    DEFPUSHBUTTON   "导出",IDOK,144,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,211,225,50,14
+END
+
+IDD_MAIN_OPTIONS DIALOG DISCARDABLE  0, 0, 425, 252
+STYLE WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "控件1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,7,
+                    411,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUPREPLAY MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&载入录象",                   ID_F_LOADREPLAY
+        MENUITEM "&加载录象",                   ID__ADDREPLAYEVENTS
+        MENUITEM "&编辑评论...",                ID__EDITCOMMENTS
+        MENUITEM "添加到收藏夹",                ID__ADDTOFAVORITES
+        MENUITEM "&更新别名...",                ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        POPUP "&启动星际观看录象"
+        BEGIN
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&自动",                       ID__WATCHREPLAYINBW_AUTO
+        END
+        POPUP "&文件"
+        BEGIN
+            MENUITEM "打开&录象列表",               ID__OPENDIRECTORY
+            MENUITEM "&移至回收站",                 ID__FILE_MOVETORECYCLEBIN
+
+            MENUITEM "移至&文件夹...",              ID__MOVETOFOLDER
+            MENUITEM "&重命名..",                   ID__FILE_RENAME
+        END
+    END
+END
+
+IDR_POPUPPLAYER MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&删除选手",                   ID__REMOVEPLAYER
+        MENUITEM "&确定/取消",                  ID__ENABLEDISABLE
+    END
+END
+
+IDR_POPUPFAV MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&载入录象",                   ID_F_LOADREPLAY
+        MENUITEM "&加载录象",                   ID__ADDREPLAYEVENTS
+        MENUITEM "&编辑评论...",                ID__EDITCOMMENTS
+        MENUITEM "&从收藏夹中删除",             ID__REMOVEFAVORITES
+        MENUITEM "&更新别名...",                ID__UPDATEAKAS
+        MENUITEM SEPARATOR
+        MENUITEM "&启动星际观看录象...",        ID__WATCHREPLAYINBW
+    END
+END
+
+IDR_POPPLAYERS MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&录象列表",                   ID_G_LISTREPLAYS
+    END
+END
+
+IDR_POPUPREPLAYMULT MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&添加到收藏夹",               ID__ADDTOFAVORITES
+        MENUITEM "&移至回收站",                 ID__FILE_MOVETORECYCLEBIN
+        MENUITEM "移至文件夹...",               ID__MOVETOFOLDER
+        MENUITEM "&重命名...",                  ID__FILE_RENAME
+    END
+END
+
+IDR_WATCHREP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&启动星际观看录象"
+        BEGIN
+            MENUITEM "BW 1.11",                     ID__WATCHREPLAY_BW111
+            MENUITEM "BW 1.10",                     ID__WATCHREPLAY_BW110
+            MENUITEM "BW 1.09",                     ID__WATCHREPLAY_BW109
+            MENUITEM "SC",                          ID__WATCHREPLAYINBW_SC
+            MENUITEM "&自动",                       ID__WATCHREPLAYINBW_AUTO
+        END
+    END
+END
+
+IDR_MENU_EVENTS MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&导出至"
+        BEGIN
+            MENUITEM "&文本文件",                   ID_FF_EXPORT_TOTEXTFILE
+            MENUITEM "&BWCoach...",                 ID__EXPORTTO_BWCOACH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DLGHELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DLGBWCHART_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DLGBROWSER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGFAVORITES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITCOMMENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_DLGAKAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DLGEDITAKAS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_PROGRESSBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 7
+    END
+
+    IDD_DLGOPTIONS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 342
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLGMAP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DLGFASTAKA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DLGOPTIONS_CHART, DIALOG
+    BEGIN
+        RIGHTMARGIN, 331
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLGOPTIONS_CHART DLGINIT
+BEGIN
+    IDC_COMBOTYPE, 0x403, 8, 0
+0x694d, 0x656e, 0x6172, 0x006c, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x6147, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 7, 0
+0x7553, 0x7070, 0x796c, "\000" 
+    IDC_COMBOTYPE, 0x403, 6, 0
+0x6e55, 0x7469, 0x0073, 
+    IDC_COMBOTYPE, 0x403, 4, 0
+0x5041, 0x004d, 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5042, 0x204d, 0x6228, 0x6975, 0x646c, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOTYPE, 0x403, 23, 0
+0x5054, 0x204d, 0x7428, 0x6172, 0x6e69, 0x7020, 0x7265, 0x6d20, 0x6e69, 
+0x7475, 0x2965, "\000" 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOLSIZE, 0x403, 2, 0
+0x0033, 
+    0
+END
+
+IDD_BWCHART_DIALOG DLGINIT
+BEGIN
+    IDC_ZOOM, 0x403, 2, 0
+0x0031, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0032, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0034, 
+    IDC_ZOOM, 0x403, 2, 0
+0x0038, 
+    IDC_ZOOM, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_ZOOM, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_APMSTYLE, 0x403, 10, 0
+0x6556, 0x7972, 0x6620, 0x616c, 0x0074, 
+    IDC_APMSTYLE, 0x403, 5, 0
+0x6c46, 0x7461, "\000" 
+    IDC_APMSTYLE, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_APMSTYLE, 0x403, 8, 0
+0x7944, 0x616e, 0x696d, 0x0063, 
+    IDC_APMSTYLE, 0x403, 13, 0
+0x6556, 0x7972, 0x4420, 0x6e79, 0x6d61, 0x6369, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOXMENU        "&关于BW Chart..."
+    IDS_DELETEAKAS          "是否真的要删除全部别名 <%s> ?"
+    IDS_EMPTYDB             "本地录象库是空的.\r\n是否要载入录象库从 '%s' ?\r\n\r\n(点击""取消""避免再次弹出此窗口)"
+    IDS_ONEREPLAYADDED      "%d 录象已加载到录象库中."
+    IDS_MULREPLAYADDED      "%d 所选中全部录象已加载到录象库中."
+    IDS_CORRUPTED           "以下录象文件可能已受损:\r\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MOREREPLAYS         "\r\n\r\n是否要将这些录象移至特殊的文件夹?BWchart将忽略它们."
+    IDS_REMOVEREP           "<%s> 永久消除.\r\n是否要将其从录象库中删除?"
+    IDS_EMPTYBWPATH         "星际安装路径错误. 请检查'选项'里的设置."
+    IDS_CANTSTARTBW         "无法启动星际. 请检查'选项'里的设置."
+    IDS_NOBWWINDOW          "无法找到星际窗口位置(可能是启动时间过长)"
+    IDS_CANTCOPY            "无法复制录象文件至bwchart的录象列表."
+    IDS_REMOVEDMISSING      "%d 丢失的录象已从录象库中删除"
+    IDS_AKAEXIST            "选中选手已存在其他别名"
+    IDS_REFRESHBROWSER      "列表现在是空的.现在是否刷新录象浏览器?"
+    IDS_PLAYERS             "选手"
+    IDS_MAPS                "地图"
+    IDS_MOVEREP             "是否要将录象库中的录象移至新的文件夹?"
+    IDS_CORRUPTEDBIS        "<%s> 可能已受损"
+    IDS_CANTLOAD            "无法载入 %s"
+    IDS_CANTCREATFILE       "无法新建文件"
+    IDS_CORRUPTED3          "<%s>\r\n可能已受损.请把该文件从录象库中删除"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DELETEALL           "是否真的要删除录象存库文件?(replays.txt) ?"
+    IDS_FORMATCHG           "录象库的模式已更改.\r\n\r\n通过双击录象浏览器窗口上的""刷新""可重建录象库\r\n. 收藏夹列表已丢失.\r\n\r\n现在新的模式可接受更新而无须重建录象库.\r\n\r\n即此带来的麻烦表示歉意."
+    IDS_SUSPICIOUS          """可疑操作 (%d)"""
+    IDS_COL_TIME            "时间"
+    IDS_COL_PLAYER          "选手"
+    IDS_COL_ACTION          "操作"
+    IDS_COL_PARAMETERS      "范围"
+    IDS_COL_UNITSID         "单位 ID"
+    IDS_COL_ACTIONS         "多项操作"
+    IDS_COL_APM             "APM"
+    IDS_COL_NULL            "无效操作"
+    IDS_COL_VAPM            "有效APM"
+    IDS_COL_MINERAL         "资源"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COL_GAS             "气体"
+    IDS_COL_SUPPLY          "人口"
+    IDS_COL_UNITS           "单位"
+    IDS_COL_APMPM           "APM+/-"
+    IDS_COL_APMMAX          "APM 最大值"
+    IDS_COL_APMMIN          "APM 最小值"
+    IDS_COL_BASE            "基地"
+    IDS_COL_REPLAYNAME      "录象名称"
+    IDS_COL_PLAYER1         "选手 1"
+    IDS_COL_APM1            "APM 1"
+    IDS_COL_PLAYER2         "选手 2"
+    IDS_COL_APM2            "APM 2"
+    IDS_COL_MAP             "地图"
+    IDS_COL_DURATION        "持续时间"
+    IDS_COL_TYPE            "类型"
+    IDS_COL_RWAAUTHOR       "RWA作者"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COL_GAMEDATE        "游戏时间"
+    IDS_COL_ENGINE          "版本"
+    IDS_COL_COMMENT         "评论"
+    IDS_COL_DIRECTORY       "录象列表"
+    IDS_COL_FILEDATE        "文件生成日期"
+    IDS_COL_POS1            "位置1"
+    IDS_COL_POS2            "位置2"
+    IDS_COL_PLAYERNAME      "选手名字"
+    IDS_COL_AVGAPM          "平均APM值"
+    IDS_COL_PERCDEV         "% dev"
+    IDS_COL_GAMESPLAYED     "已完成的游戏"
+    IDS_COL_ZERGPERC        "虫族%"
+    IDS_COL_RANPERC         "人族%"
+    IDS_COL_TOSSPERC        "神族%"
+    IDS_COL_MAPNAME         "地图名称"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COL_AVGGAMEDURATION "平均游戏时间"
+    IDS_WATCHREPLAY         "查看录象"
+    IDS_CHARTS              "图表"
+    IDS_OTHEROPTIONS        "其他选项"
+    IDS_MKDURATION          "持续时间: %s@%s"
+    IDS_DROP                "空投"
+    IDS_EXPAND              "扩张"
+    IDS_LEAVE               "离开"
+    IDS_MINGAS              "资源 && 气体"
+    IDS_SUPPLYUNIT          "人口 && 单位"
+    IDS_AUDIOCOMMENT        " (语音评论由 %s)"
+    IDS_TOTAL               "[总计 = %d]"
+    IDS_ANIMATE             "&动画演示"
+    IDS_STOP                "&停止"
+    IDS_BUILDS              "建筑"
+    IDS_MOVES               "移动"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UNITS               "单位"
+    IDS_CT_RESOURCES        "资源"
+    IDS_CT_UNITDIST         "单位组成"
+    IDS_CT_ACTIONDIST       "操作分配"
+    IDS_CT_BUILDDIST        "建筑组成"
+    IDS_CT_UPGRADES         "升级"
+    IDS_CT_APMDIST          "APM值分配"
+    IDS_CT_BO               "建造顺序"
+    IDS_CT_HOTKEYS          "热键"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+

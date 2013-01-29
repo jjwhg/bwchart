@@ -1,0 +1,2 @@
+document.write("<hr width='90%' size='1' align='left'>")
+document.write("<i><font face='Verdana' size='-2'><a href='mailto:spyderman@noos.fr'>Send feedback</a>.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2003 <a href='http://mapage.noos.fr/spyderman/bwchart.htm'>JCA</a>. All rights reserved.</font>")
