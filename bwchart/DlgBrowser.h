@@ -168,10 +168,15 @@ public:
 	bool m_refreshReplays;
 	//}}AFX_DATA
 
+	DWORD fl_load_db;
+
 	const CStringArray* GetPlayers() const;
 	const CStringArray* GetMaps() const {return &m_allMaps;}
 	void Refresh(bool msg);
 	bool IsRefreshDone() const {return m_bRefreshDone;}
+	void AskUserForLoading();
+	void SetFlagAndLoad();
+	void LoadShowingProgress();
 	void Load();
 	void RefreshAkas();
 	void StartReplay(ReplayInfo* selectedReplay, int version=-1) ;
