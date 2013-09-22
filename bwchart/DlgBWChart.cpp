@@ -378,6 +378,7 @@ void DlgBWChart::_UpdateScreen(int tab)
 		break;
 	case 1:
 		if(m_dlgAkas) m_dlgAkas->ShowWindow(SW_HIDE);
+		m_dlgBrowser->SetFlagAndLoad();
 		m_dlgBrowser->ShowWindow(SW_SHOW);
 		m_dlgBrowser->GetDlgItem(IDC_REFRESH)->SetFocus();	// list ctrl bug, must set focus to button
 		m_dlgStats->ShowWindow(SW_HIDE);
@@ -388,6 +389,7 @@ void DlgBWChart::_UpdateScreen(int tab)
 		if(m_dlgAkas) m_dlgAkas->ShowWindow(SW_HIDE);
 		m_dlgStats->ShowWindow(SW_HIDE);
 		m_dlgBrowser->ShowWindow(SW_HIDE);
+		m_dlgBrowser->SetFlagAndLoad();
 		m_dlgFavs->GetDlgItem(IDC_EDITCOMMENT)->SetFocus();	// list ctrl bug, must set focus to button
 		m_dlgFavs->ShowWindow(SW_SHOW);
 		m_dlgOptions->ShowWindow(SW_HIDE);

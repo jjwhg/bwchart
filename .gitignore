@@ -1,0 +1,11 @@
+# build intermediates
+*/Debug
+*/Release/*
+# build release results - make it downloadable
+!bwchart/Release/bwchart.exe
+!bwrep/Release/bwrep.dll
+!bwrep/Release/bwrep.lib
+# VS auxiliary files
+*.suo
+*.ncb
+*.vcproj.*.user

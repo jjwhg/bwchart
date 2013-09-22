@@ -186,6 +186,9 @@ DlgBrowser::DlgBrowser(CWnd* pParent /*=NULL*/)
 	m_currentSortIdx3=0;
 	memset(m_Descending4,1,sizeof(m_Descending4));
 	m_currentSortIdx4=0;
+
+	fl_load_db = 0;
+	//AskUserForLoading();
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -1206,6 +1209,33 @@ void DlgBrowser::ProcessEntry(const char * section, const char *entry, const cha
 
 //--------------------------------------------------------------------------------------------------------------
 
+void DlgBrowser::AskUserForLoading() 
+{
+	if (!fl_load_db)
+	{
+		fl_load_db = 
+			MessageBoxA("Load full database now?\n\n"
+				"It can take some time depending on number of replays.", 
+				"bwchart", MB_YESNO | MB_DEFBUTTON2) == IDYES;
+		if(fl_load_db)
+			LoadShowingProgress();
+	}
+}
+
+//--------------------------------------------------------------------------------------------------------------
+
+void DlgBrowser::SetFlagAndLoad() 
+{
+	if (!fl_load_db)
+	{
+		fl_load_db = 1;
+		if(fl_load_db)
+			LoadShowingProgress();
+	}
+}
+
+//--------------------------------------------------------------------------------------------------------------
+
 void DlgBrowser::Load() 
 {
 	CWaitCursor wait;
@@ -1213,39 +1243,43 @@ void DlgBrowser::Load()
 	// clear all
 	_ClearAll();
 
-	// load entries from replay database
-	DWORD now = GetTickCount();
-	LoadFile(BWChartDB::FILE_MAIN);
-	now = GetTickCount() - now;
-	//CString debug;
-	//debug.Format("%lu\r\n",now);
-	//OutputDebugString(debug);
-
-	// any replay?
-	if(m_replays.GetSize()==0 && !m_bRefreshDone)
+	// check if user asked to load database
+	if (fl_load_db)
 	{
-		// want to build replay database?
-		CString msg;
-		msg.Format(IDS_EMPTYDB,(const char*)m_rootdir);
-		bool dontask = AfxGetApp()->GetProfileInt("BROWSER","DONTASK",0)?true:false;
-		UINT res = dontask ? IDNO : MessageBox(msg,0,MB_YESNOCANCEL);
-		if(res==IDYES)
-		{
-			m_bDBLoaded=true;
-			Refresh(true);
-			return;
-		}
-		else if(res==IDCANCEL)
-		{
-			AfxGetApp()->WriteProfileInt("BROWSER","DONTASK",1);
-		}
-	}
+		// load entries from replay database
+		DWORD now = GetTickCount();
+		LoadFile(BWChartDB::FILE_MAIN);
+		now = GetTickCount() - now;
+		//CString debug;
+		//debug.Format("%lu\r\n",now);
+		//OutputDebugString(debug);
 
-	// do we have a BO file?
-	if(!MAINWND->HasBOFile())
-	{
-		if(AfxMessageBox(IDS_BUILDBOFILE,MB_YESNO)==IDYES)
-			_BuildBOFile();
+		// any replay?
+		if(m_replays.GetSize()==0 && !m_bRefreshDone)
+		{
+			// want to build replay database?
+			CString msg;
+			msg.Format(IDS_EMPTYDB,(const char*)m_rootdir);
+			bool dontask = AfxGetApp()->GetProfileInt("BROWSER","DONTASK",0)?true:false;
+			UINT res = dontask ? IDNO : MessageBox(msg,0,MB_YESNOCANCEL);
+			if(res==IDYES)
+			{
+				m_bDBLoaded=true;
+				Refresh(true);
+				return;
+			}
+			else if(res==IDCANCEL)
+			{
+				AfxGetApp()->WriteProfileInt("BROWSER","DONTASK",1);
+			}
+		}
+
+		// do we have a BO file?
+		if(!MAINWND->HasBOFile())
+		{
+			if(AfxMessageBox(IDS_BUILDBOFILE,MB_YESNO)==IDYES)
+				_BuildBOFile();
+		}
 	}
 
 	// display players & maps
@@ -2022,6 +2056,15 @@ LRESULT DlgBrowser::OnMsgAutoRefresh(WPARAM , LPARAM )
 		DispatchMessage(&msg);
 	}
 
+	LoadShowingProgress();
+
+	return 0L;
+}
+
+//------------------------------------------------------------------------------------
+
+void DlgBrowser::LoadShowingProgress()
+{
 	// open progress window
 	m_progDlg = new ProgressDlg(this); assert(m_progDlg!=0);
 	m_progDlg->Create(ProgressDlg::IDD,this);
@@ -2034,9 +2077,8 @@ LRESULT DlgBrowser::OnMsgAutoRefresh(WPARAM , LPARAM )
 	m_progDlg->DestroyWindow();
 	delete m_progDlg;
 	m_progDlg=0;
-
-	return 0L;
 }
+
 
 //------------------------------------------------------------------------------------
 

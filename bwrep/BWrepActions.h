@@ -78,7 +78,7 @@ private:
 //----------------------------------------------------------------------------------------------------
 
 // decoded actions list (it's an array really)
-class BWrepActionList : public IStarcraftActionList
+class DllExport BWrepActionList : public IStarcraftActionList
 {
 public:
 	BWrepActionList() : m_actions(0), m_data(0), m_size(0), m_actionCount(0) {}
