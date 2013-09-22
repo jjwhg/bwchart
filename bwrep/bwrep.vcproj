@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="bwrep"
 	ProjectGUID="{7A72473F-8CFA-46E5-9826-C7323E3407BD}"
+	RootNamespace="bwrep"
 	>
 	<Platforms>
 		<Platform
@@ -333,6 +334,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\hsvrgb.cpp"
+				>
+			</File>
+			<File
 				RelativePath="StdAfx.cpp"
 				>
 				<FileConfiguration
@@ -383,6 +388,10 @@
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\hsvrgb.h"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
