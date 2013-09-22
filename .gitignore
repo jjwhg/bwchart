@@ -1,0 +1,9 @@
+# build results
+*/Debug
+*/Release
+# VS auxiliary files
+*.suo
+*.ncb
+*.vcproj.*.user
+
+
